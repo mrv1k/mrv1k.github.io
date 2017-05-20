@@ -1,0 +1,19 @@
+{
+  "name": "mrv1k-portfolio",
+  "private": true,
+  "dependencies": {
+    "bootstrap": "~4.0.0-alpha.6"
+  },
+  "overrides": {
+    "bootstrap": {
+      "main": [
+        "scss/bootstrap.scss",
+        "dist/js/bootstrap.js"
+      ]
+    }
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^3.4.1"
+  }
+}
