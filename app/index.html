@@ -1,81 +1,115 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Khotimchenko Viktor | JavaScript Developer based in Toronto</title>
 
-    <link rel="apple-touch-icon" href="apple-touch-icon.png">
-    <!-- Place favicon.ico in the root directory -->
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Khotimchenko Viktor | JavaScript Developer based in Toronto</title>
 
-    <!-- build:css styles/vendor.css -->
-    <!-- bower:css -->
-    <!-- endbower -->
-    <!-- endbuild -->
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <!-- Place favicon.ico in the root directory -->
 
-    <!-- build:css styles/main.css -->
-    <link rel="stylesheet" href="styles/main.css">
-    <!-- endbuild -->
+  <!-- build:css styles/vendor.css -->
+  <!-- bower:css -->
+  <!-- endbower -->
+  <!-- endbuild -->
 
-  </head>
-  <body>
-    <div class="container-fluid">
-      <div class="header navbar">
-        <nav class="fixed-top bg-faded">
-          <ul class="nav justify-content-center">
-            <li class="nav-item">
-              <a class="nav-link" href="#">Playground</a>
-            </li>
-            <!-- try navbar-brand?-->
-            <li class="nav-item hidden-xs-down">
-              <a class="nav-link" href="#">mrv1k
+  <!-- build:css styles/main.css -->
+  <link rel="stylesheet" href="styles/main.css">
+  <!-- endbuild -->
+
+</head>
+
+<body>
+  <!--px-0 remove 15px left and right paddings-->
+  <div class="container-fluid px-0">
+    <div class="header">
+      <nav class="navbar fixed-top bg-faded">
+        <ul class="nav justify-content-center">
+          <li class="nav-item">
+            <a class="nav-link" href="#">Playground</a>
+          </li>
+          <!-- try navbar-brand?-->
+          <li class="nav-item hidden-xs-down">
+            <a class="nav-link" href="#">mrv1k
                 <!--<img src="mrv1k-logo" class="d-inline-block align-top" alt="TBD">-->
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Contact</a>
-            </li>
-          </ul>
-        </nav>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contact</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="body">
+      <!--mt-5 to fix nav overlapping-->
+      <div class='d-flex bg-faded mt-5 p-3'>
+        <p>About me blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah</p>
       </div>
 
-      <div class="body">
-        <div class="project-full project-tictactoe my-4">
+      <div class="project-full project-tictactoe mt-5 mb-4 bg-faded">
+        <div class="container">
           <h1 class="title display-4">TicTacToe</h1>
           <div class="tags">
-            <span>Front-end</span>
+            <span class="badge badge-default">Playground</span>
+            <span class="badge badge-default">Front-end</span>
+            <span class="badge badge-default">AI</span>
           </div>
-          <p class="desc">Classic game featuring 3 AI difficulties and player vs player mode.</p>
-          <p class="links">
-            <a href="http://codepen.io/v1tas/full/OmNZKm/">View Live</a>
-            <a href="#">Read More</a>
-            <a href="http://codepen.io/v1tas/pen/OmNZKm">Words mean nothing show me the code</a>
-          </p>
-        </div>
-
-        <div class="project-full project-PLACEHOLDER my-4">
-          <h1 class="title display-4">Placeholder</h1>
-          <div class="tags">
-            <span>Placeholder</span>
-            <span>Placeholder</span>
-          </div>
-          <p class="desc">This is a placeholder description. It contains no real information and is used for testing purposes only.</p>
-          <p class="links">
-            <a href="#livelink">View Live</a>
-            <a href="#redmorelink">Read More</a>
-            <a href="#githublink">View Source</a>
-          </p>
+          <p class="lead desc ">Classic game featuring 3 AI difficulties and player vs player mode.</p>
+          <span class="links">
+            <a class="btn btn-secondary" href="http://codepen.io/v1tas/full/OmNZKm/">View Live</a>
+            <a class="btn btn-secondary" href="#redmorelink">Read More</a>
+            <a class="btn btn-secondary" href="http://codepen.io/v1tas/pen/OmNZKm">View Source</a>
+          </span>
         </div>
       </div>
 
-      <div class="footer">
-        <p>Viktor Khotimchenko</p>
+      <div class="jumbotron jumbotron-fluid bg-faded">
+        <div class="container">
+          <h1 class="title display-4">Jumbotronholder</h1>
+        <div class="tags">
+          <span class="badge badge-default">Placeholder</span>
+          <span class="badge badge-default">Placeholder</span>
+          <span class="badge badge-default">Placeholder</span>
+        </div>
+
+        <p class="lead">This is a placeholder description. It contains no real information and is used for testing purposes only.</p>
+
+        <span class="links">
+          <a class="btn btn-secondary" href="#livelink">View Live</a>
+          <a class="btn btn-secondary" href="#redmorelink">Read More</a>
+          <a class="btn btn-secondary" href="#githublink">View Source</a>
+        </span>
+        </div>
+      </div>
+
+      <div class="project-full project-PLACEHOLDER my-4 bg-faded">
+        <div class="container">
+          <h1 class="title display-4">Placeholder</h1>
+          <div class="tags">
+            <span class="badge badge-default">Placeholder</span>
+            <span class="badge badge-default">Placeholder</span>
+            <span class="badge badge-default">Placeholder</span>
+          </div>
+          <p class="desc">This is a placeholder description. It contains no real information and is used for testing purposes only.</p>
+          <span class="links">
+            <a class="btn btn-secondary" href="#livelink">View Live</a>
+            <a class="btn btn-secondary" href="#redmorelink">Read More</a>
+            <a class="btn btn-secondary" href="#githublink">View Source</a>
+          </span>
+        </div>
       </div>
     </div>
 
-    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-    <!--<script>
+    <div class="footer bg-faded">
+      <p>Viktor Khotimchenko</p>
+    </div>
+  </div>
+
+  <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+  <!--<script>
       (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
       function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
       e=o.createElement(i);r=o.getElementsByTagName(i)[0];
@@ -84,15 +118,16 @@
       ga('create','UA-XXXXX-X');ga('send','pageview');
     </script>-->
 
-    <!-- build:js scripts/vendor.js -->
-    <!-- bower:js -->
-    <script src="/bower_components/jquery/dist/jquery.js"></script>
-    <script src="/bower_components/tether/dist/js/tether.js"></script>
-    <!-- endbower -->
-    <!-- endbuild -->
+  <!-- build:js scripts/vendor.js -->
+  <!-- bower:js -->
+  <script src="/bower_components/jquery/dist/jquery.js"></script>
+  <script src="/bower_components/tether/dist/js/tether.js"></script>
+  <!-- endbower -->
+  <!-- endbuild -->
 
-    <!-- build:js scripts/main.js -->
-    <script src="scripts/main.js"></script>
-    <!-- endbuild -->
-  </body>
+  <!-- build:js scripts/main.js -->
+  <script src="scripts/main.js"></script>
+  <!-- endbuild -->
+</body>
+
 </html>
