@@ -2,6 +2,26 @@
 @import "bower_components/bootstrap/scss/bootstrap.scss";
 // endbower
 
+.title {
+  word-wrap:break-word;
+}
+
+.aboutme {
+  margin-top: 56px;
+}
+
+.jumbotron {
+  margin-bottom: 0;
+  border-bottom: 1px solid black;
+}
+
+.project-tictactoe {
+  background: url(https://i.imgpile.com/n1fvmG.jpg) bottom center no-repeat
+  // background: url(logo.png) bottom center no-repeat
+}
+
 .footer {
   position: absolute;
+  width: 100%;
 }
+
