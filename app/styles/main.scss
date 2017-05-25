@@ -1,7 +1,7 @@
 // bower:scss
 @import "bower_components/bootstrap/scss/bootstrap.scss";
 // endbower
-@import "icomoon.scss";
+@import "fonts.scss";
 
 /* RGB */
 $white:  rgba(255, 255, 250, 1);
@@ -10,8 +10,16 @@ $yellow: rgba(252, 202, 70, 1);
 $black:  rgba(10, 15, 13, 1);
 $blue:   rgba(0, 61, 91, 1);
 
+body {
+  font-family: 'WeblySleek_UI_Semilight';
+}
+
 .title {
-  //
+  font-family: 'Lato';
+}
+
+.tags {
+  font-family: 'Lato';
 }
 
 .aboutme {
@@ -21,9 +29,9 @@ $blue:   rgba(0, 61, 91, 1);
 .jumbotron {
   margin-bottom: 0;
   color: $white;
-  // border-bottom: 1px solid black;
 }
 
+// testing
 .project-tictactoe {
   background: url(../images/_grey.png) bottom center no-repeat;
 }
@@ -50,6 +58,6 @@ $blue:   rgba(0, 61, 91, 1);
 
 @media (max-width: 576px) {
   .jumbotron {
-    padding: 1rem 0;
+    padding-top: 0;
   }
 }

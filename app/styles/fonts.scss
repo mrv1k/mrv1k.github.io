@@ -1,4 +1,32 @@
 @font-face {
+  font-family: 'WeblySleek_UI_Normal'; // 400
+  src: url('../fonts/Weblysleek_ui/WeblySleek_UI_Normal.ttf');
+}
+@font-face {
+  font-family: 'WeblySleek_UI_Semilight'; // 300
+  src: url('../fonts/Weblysleek_ui/WeblySleek_UI_Semilight.ttf');
+}
+@font-face {
+  font-family: 'WeblySleek_UI_Semibold'; // 600
+  src: url('../fonts/Weblysleek_ui/WeblySleek_UI_Semibold.ttf');
+}
+
+@font-face {
+  font-family: 'Lato'; // 400
+  src: url('../fonts/Lato/Lato-Regular.ttf');
+}
+@font-face {
+  font-family: 'Lato Light'; // 300
+  src: url('../fonts/Lato/Lato-Light.ttf');
+}
+@font-face {
+  font-family: 'Lato Bold'; // 700
+  src: url('../fonts/Lato/Lato-Bold.ttf');
+}
+
+
+// Icons font: github, codepen
+@font-face {
   font-family: 'icomoon';
   src:
     url('../fonts/icomoon/icomoon.ttf?m07opx') format('truetype'),
