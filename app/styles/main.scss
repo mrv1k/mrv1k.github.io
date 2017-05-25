@@ -11,7 +11,8 @@ $black:  rgba(10, 15, 13, 1);
 $blue:   rgba(0, 61, 91, 1);
 
 .title {
-  word-wrap:break-word;
+  // disable: it was breaking mobile layout
+  // word-wrap:break-word;
 }
 
 .aboutme {
@@ -48,4 +49,9 @@ $blue:   rgba(0, 61, 91, 1);
   vertical-align: middle;
 }
 
-
+@include media-breakpoint-up(xs) {
+  .jumbotron {
+    padding-top: 0;
+  }
+ }
+//
