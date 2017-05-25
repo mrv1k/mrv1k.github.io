@@ -2,6 +2,13 @@
 @import "bower_components/bootstrap/scss/bootstrap.scss";
 // endbower
 
+/* RGB */
+$white:  rgba(255, 255, 250, 1);
+$red:    rgba(204, 41, 54, 1);
+$yellow: rgba(252, 202, 70, 1);
+$black:  rgba(10, 15, 13, 1);
+$blue:   rgba(0, 61, 91, 1);
+
 .title {
   word-wrap:break-word;
 }
@@ -12,12 +19,21 @@
 
 .jumbotron {
   margin-bottom: 0;
-  border-bottom: 1px solid black;
+  color: $white;
+  // border-bottom: 1px solid black;
 }
 
 .project-tictactoe {
-  background: url(https://i.imgpile.com/n1fvmG.jpg) bottom center no-repeat
-  // background: url(logo.png) bottom center no-repeat
+  background: url(../images/_grey.png) bottom center no-repeat;
+}
+.project-red {
+  background: url(../images/red.png) bottom center no-repeat;
+}
+.project-yellow {
+  background: url(../images/yellow.png) bottom center no-repeat;
+}
+.project-blue {
+  background: url(../images/blue.png) bottom center no-repeat;
 }
 
 .footer {
