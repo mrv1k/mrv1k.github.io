@@ -1,6 +1,7 @@
 // bower:scss
 @import "bower_components/bootstrap/scss/bootstrap.scss";
 // endbower
+@import "icomoon.scss";
 
 /* RGB */
 $white:  rgba(255, 255, 250, 1);
@@ -40,4 +41,11 @@ $blue:   rgba(0, 61, 91, 1);
   position: absolute;
   width: 100%;
 }
+
+.social-codepen,
+.social-github {
+  // font-size: 1.5rem;
+  vertical-align: middle;
+}
+
 
