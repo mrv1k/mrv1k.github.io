@@ -23,9 +23,23 @@ body {
 }
 
 .aboutme {
-  margin-top: 56px;
+  // margin-top: 56px;
+  background: $blue;
+  color: $white;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
+.testBG {
+  // background-image: url(http://ppcdn.500px.org/75319705/1991f76c0c6a91ae1d23eb94ac5c7a9f7e79c480/2048.jpg);
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+}
 .jumbotron {
   margin-bottom: 0;
   color: $white;
@@ -52,7 +66,6 @@ body {
 
 .social-codepen,
 .social-github {
-  // font-size: 1.5rem;
   vertical-align: middle;
 }
 
