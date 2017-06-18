@@ -22,33 +22,32 @@
 </head>
 
 <body>
+
+  <nav class="navbar fixed-top navbar-toggleable-md">
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon">=</span>
+    </button>
+    <a class="navbar-brand" href="#">mrv1k</a>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-item nav-link active" href="#about">About me</a>
+        <a class="nav-item nav-link" href="#projects">Projects</a>
+        <a class="nav-item nav-link" href="#">Contact</a>
+      </div>
+    </div>
+  </nav>
+
   <!--px-0 remove 15px left and right paddings-->
   <div class="container-fluid px-0">
-    <div class="header">
-      <nav class="navbar fixed-top bg-faded">
-        <ul class="nav justify-content-center">
-          <li class="nav-item">
-            <a class="nav-link" href="#projects">Projects</a>
-          </li>
-          <!-- try navbar-brand?-->
-          <li class="nav-item hidden-xs-down">
-            <a class="nav-link" href="#">Home
-                <!--<img src="mrv1k-logo" class="d-inline-block align-top" alt="TBD">-->
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Contact</a>
-          </li>
-        </ul>
-      </nav>
-    </div>
-
     <div class="body">
       <!--mt-5 to fix nav overlapping-->
-      <div id="about" class='aboutme pt-5 testBG'>
+      <div id="about" class='aboutme pt-5 aboutBG'>
         <div class="container">
           <div class="col-sm-10 push-sm-1 col-md-8 push-md-2 col-lg-6 push-lg-3">
+
+            <div class="bg-glass"></div>
             <p class="text">Hello! My name is Viktor Khotimchenko. I am a self-taught JavaScript developer focused on creating immersive web and game experiences. When I am not writing code, I spend as much time as I can with my friends. I love solving problems, and I adore how coding makes it consistent.</p>
+
           </div>
         </div>
       </div>
@@ -114,7 +113,7 @@
       </div>
 
     </div>
-    <footer class="footer mt-3 p-2 bg-faded">
+    <footer class="footer mt-3 p-2">
       <div class="text-center">
 
         <a href="https://codepen.io/v1tas/" class="btn btn-secondary social-codepen"><i class="icon icon-codepen"></i></a>
@@ -140,6 +139,9 @@
   <!-- bower:js -->
   <script src="/bower_components/jquery/dist/jquery.js"></script>
   <script src="/bower_components/tether/dist/js/tether.js"></script>
+
+  <script src="/bower_components/bootstrap/dist/js/bootstrap.js"></script>
+  <script src="/bower_components/bootstrap/js/dist/carousel.js"></script>
   <!-- endbower -->
   <!-- endbuild -->
 

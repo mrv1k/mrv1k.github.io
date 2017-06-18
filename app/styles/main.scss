@@ -14,17 +14,20 @@ body {
   font-family: 'WeblySleek_UI_Semilight';
 }
 
-.title {
-  font-family: 'Lato';
+.navbar {
+  background-color: $black;
+  opacity: 0.8;
+  a, span {
+    color: $white;
+  }
 }
 
-.tags {
+.title, .tags {
   font-family: 'Lato';
 }
 
 .aboutme {
   // margin-top: 56px;
-  background: $blue;
   color: $white;
   height: 100vh;
   display: flex;
@@ -32,14 +35,22 @@ body {
   justify-content: center;
 }
 
-.testBG {
-  // background-image: url(http://ppcdn.500px.org/75319705/1991f76c0c6a91ae1d23eb94ac5c7a9f7e79c480/2048.jpg);
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
+.aboutBG {
+  background-image: url(../images/about_bg.png);
   background-size: cover;
-
 }
+
+.bg-glass {
+  filter: blur(10px);
+}
+
+.text {
+  position: relative;
+  z-index: 100;
+  padding: 20px;
+  background: rgba(34,34,34,0.75);
+}
+
 .jumbotron {
   margin-bottom: 0;
   color: $white;
