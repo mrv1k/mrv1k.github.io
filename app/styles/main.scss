@@ -41,15 +41,36 @@ body {
 }
 
 .bg-glass {
-  filter: blur(10px);
+  background: inherit;
+  position: relative;
+  &:before {
+    content: '';
+    position: absolute;
+    width:100%;
+    height:100%;
+    background: inherit;
+  }
+  &:after {
+    // background-color: $black;
+    background: transparentize($black, 0.3);
+    -webkit-filter: blur(3px);
+    filter: blur(3px);
+    content: '';
+    position: absolute;
+    left:0;
+    top:0;
+    width: 100%;
+    height: 100%;
+  }
+  .text {
+    position: relative;
+    padding: 20px;
+    z-index:5;
+    display: block;
+  }
 }
 
-.text {
-  position: relative;
-  z-index: 100;
-  padding: 20px;
-  background: rgba(34,34,34,0.75);
-}
+
 
 .jumbotron {
   margin-bottom: 0;
