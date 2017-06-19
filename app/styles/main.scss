@@ -14,16 +14,16 @@ body {
   font-family: 'WeblySleek_UI_Semilight';
 }
 
+.title, .tags {
+  font-family: 'Lato';
+}
+
 .navbar {
   background-color: $black;
   opacity: 0.8;
   a, span {
     color: $white;
   }
-}
-
-.title, .tags {
-  font-family: 'Lato';
 }
 
 .aboutme {
@@ -70,8 +70,6 @@ body {
   }
 }
 
-
-
 .jumbotron {
   margin-bottom: 0;
   color: $white;
@@ -96,14 +94,10 @@ body {
   width: 100%;
 }
 
-.social-codepen,
-.social-github {
-  vertical-align: middle;
-}
-
 // fix spacing for screens up to desktop breakpoint
 @media (max-width: 992px) {
   .jumbotron {
-    padding-top: 0;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
   }
 }
