@@ -37,7 +37,7 @@
             <div class="navbar-nav text-center">
               <a class="nav-item nav-link" href="#about">About me</a>
               <a class="nav-item nav-link" href="#projects">Projects</a>
-              <a class="nav-item nav-link" href="#">Contact</a>
+              <a class="nav-item nav-link disabled" href="#">Contact</a>
             </div>
           </div>
         </div>
@@ -45,7 +45,8 @@
 
       <div class="body">
         <!--mt-5 to fix nav overlapping-->
-        <div id="about" class='aboutme pt-5 aboutBG'>
+        <span class="fixed-top-nav-anchor" id="about"></span>
+        <div class='aboutme pt-5 aboutBG'>
           <div class="container">
             <div class="col-sm-10 push-sm-1 col-md-8 push-md-2 col-lg-6 push-lg-3">
 
@@ -57,7 +58,8 @@
           </div>
         </div>
 
-        <div id="projects" class="jumbotron jumbotron-fluid project-full project-red">
+        <span class="fixed-top-nav-anchor" id="projects"></span>
+        <div class="jumbotron jumbotron-fluid project-full project-red">
           <div class="container">
             <div class="col-sm-12 col-md-8">
               <h1 class="title display-4 text-truncate">TicTacToe</h1>

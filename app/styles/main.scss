@@ -19,11 +19,24 @@ body {
 }
 
 .navbar {
-  background-color: $black;
-  opacity: 0.8;
-  a, span {
+  background-color: transparent;
+  box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
+  a, .navbar-toggler-icon {
     color: $white;
+    border-bottom: 2px solid transparent
   }
+}
+
+.nav-item:hover {
+  border-bottom: 2px solid $yellow;
+}
+
+.fixed-top-nav-anchor {
+    margin-top: -56px;
+    display: block;
+    height: 56px;
+    visibility: hidden;
+    position: relative;
 }
 
 .aboutme {
@@ -99,5 +112,10 @@ body {
   .jumbotron {
     padding-top: 2rem;
     padding-bottom: 2rem;
+  }
+
+  .navbar {
+    background-color: $black;
+    opacity: 0.9;
   }
 }
