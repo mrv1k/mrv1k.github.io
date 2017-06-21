@@ -126,13 +126,13 @@
             <input type="hidden" name="_subject" value="Portfolio website!">
 
             <div class="form-group">
-              <input name="sender-name" type="text" class="form-control" required="required" aria-describedby="Your name" placeholder="Your name">
+              <input name="sender-name" class="form-control" type="text" required aria-describedby="Your name" data-msg="Please fill this field" placeholder="Name">
             </div>
             <div class="form-group">
-              <input name="_replyto" type="email" class="form-control" required="required" aria-describedby="Your email" placeholder="Your email">
+              <input name="_replyto" class="form-control" type="email" required aria-describedby="Your email" data-msg="Please fill in your email so I can get back to you" placeholder="email@address.com">
             </div>
             <div class="form-group">
-              <textarea name="message" placeholder="Your message" class="form-control" required="required" rows="4"></textarea>
+              <textarea name="message" class="form-control" required rows="4" data-msg="Don't be shy, write me a few lines :)" placeholder="Message"></textarea>
             </div>
             <input class="hidden-xs-up" type="text" name="_gotcha">
             <button type="submit" class="btn btn-outline-success w-100 form-submit-btn">Send</button>
@@ -177,6 +177,7 @@
   <script src="/bower_components/jquery/dist/jquery.js"></script>
   <script src="/bower_components/tether/dist/js/tether.js"></script>
   <script src="/bower_components/modernizr/modernizr.js"></script>
+  <script src="/bower_components/jquery-validation/dist/jquery.validate.js"></script>
   <!-- endbower -->
   <!-- endbuild -->
 
@@ -184,6 +185,7 @@
   <script src="/bower_components/bootstrap/js/dist/util.js"></script>
   <script src="/bower_components/bootstrap/js/dist/collapse.js"></script>
   <script src="/bower_components/bootstrap/js/dist/scrollspy.js"></script>
+  <script src="/bower_components/jquery-validation/dist/jquery.validate.min.js"></script>
   <!-- endbuild-->
 
   <!-- build:js scripts/main.js -->
