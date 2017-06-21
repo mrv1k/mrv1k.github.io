@@ -121,6 +121,37 @@ body {
   width: 100%;
 }
 
+
+.footer-icons {
+  font-size: 1.5rem;
+
+  a {
+    color: $black;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+    border: 1px solid transparent;
+    &:hover {
+      text-decoration: none;
+      transition: all 0.2s ease-in-out;
+      border: 1px solid $black;
+    }
+  }
+}
+
+
+.form-submit-btn {
+  cursor: pointer;
+}
+
+.footer-icons,
+.footer-signature {
+  padding-top: 1rem;
+}
+
 // fix spacing for screens up to desktop breakpoint
 @media (max-width: 992px) {
   .jumbotron {
@@ -130,6 +161,5 @@ body {
 
   .navbar {
     background-color: transparentize($black, 0.3);
-
   }
 }
