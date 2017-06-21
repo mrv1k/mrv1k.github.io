@@ -23,103 +23,102 @@
     <!-- endbuild -->
   </head>
 
-  <body>
+  <body data-spy="scroll" data-target="#mynavbar">
     <!--px-0 remove 15px left and right paddings-->
     <div class="container-fluid px-0">
 
-      <nav class="navbar navbar-toggleable-md fixed-top">
-        <div class="container">
-          <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"><i class="icon icon-th-menu align-middle"></i></span>
-          </button>
-          <a class="navbar-brand" href="#">mrv1k</a>
-          <div class="collapse navbar-collapse justify-content-lg-end" id="navbarNavAltMarkup">
-            <div class="navbar-nav text-center">
-              <a class="nav-item nav-link" href="#about">About me</a>
-              <a class="nav-item nav-link" href="#projects">Projects</a>
-              <a class="nav-item nav-link disabled" href="#">Contact</a>
-            </div>
-          </div>
+    <nav class="navbar navbar-toggleable-md fixed-top">
+      <div class="container">
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#mynavbar" aria-controls="mynavbar" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"><i class="icon icon-th-menu align-middle"></i></span>
+        </button>
+        <a class="navbar-brand" href="#">mrv1k</a>
+        <div class="collapse navbar-collapse justify-content-lg-end" id="mynavbar">
+          <ul class="nav nav-my-underscore">
+            <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+            <li class="nav-item"><a class="nav-link disabled" href="#contact">Contact</a></li>
+
+          </ul>
         </div>
-      </nav>
-
-      <div class="body">
-        <!--mt-5 to fix nav overlapping-->
-        <span class="fixed-top-nav-anchor" id="about"></span>
-        <div class='aboutme pt-5 aboutBG'>
-          <div class="container">
-            <div class="col-sm-10 push-sm-1 col-md-8 push-md-2 col-lg-6 push-lg-3">
-
-              <div class="bg-glass">
-                <p class="text">Hello! My name is Viktor Khotimchenko. I am a self-taught JavaScript developer focused on creating immersive web and game experiences. When I am not writing code, I spend as much time as I can with my friends. I love solving problems, and I adore how coding makes it consistent.</p>
-              </div>
-
-            </div>
-          </div>
-        </div>
-
-        <span class="fixed-top-nav-anchor" id="projects"></span>
-        <div class="jumbotron jumbotron-fluid project-full project-red">
-          <div class="container">
-            <div class="col-sm-12 col-md-8">
-              <h1 class="title display-4 text-truncate">TicTacToe</h1>
-              <div class="tags">
-                <span class="badge badge-default">JS</span>
-                <span class="badge badge-default">AI</span>
-              </div>
-              <p class="lead desc">Classic game featuring 3 AI difficulties and player vs player mode.</p>
-              <span class="links">
-                <a class="btn btn-secondary" href="http://codepen.io/v1tas/full/OmNZKm/">Live</a>
-                <a class="btn btn-secondary" href="#redmorelink">More</a>
-                <a class="btn btn-secondary" href="http://codepen.io/v1tas/pen/OmNZKm">Source</a>
-              </span>
-            </div>
-          </div>
-        </div>
-
-        <div class="jumbotron jumbotron-fluid project-full project-PLACEHOLDER  project-yellow">
-          <div class="container">
-            <div class="col-sm-12 col-md-8">
-              <h1 class="title display-4 text-truncate">Jumbotronholder</h1>
-              <div class="tags">
-                <span class="badge badge-default">Placeholder</span>
-                <span class="badge badge-default">Placeholder</span>
-                <span class="badge badge-default">Placeholder</span>
-              </div>
-
-              <p class="lead desc">This is a placeholder description. It contains no real information and is used for testing purposes only.</p>
-
-              <span class="links">
-                <a class="btn btn-secondary" href="#livelink">Live</a>
-                <a class="btn btn-secondary" href="#redmorelink">More</a>
-                <a class="btn btn-secondary" href="#githublink">Source</a>
-              </span>
-            </div>
-          </div>
-        </div>
-
-        <div class="jumbotron jumbotron-fluid project-full project-PLACEHOLDER project-blue">
-          <div class="container">
-            <div class="col-sm-12 col-md-8">
-              <h1 class="title display-4 text-truncate">Jumbotronholder</h1>
-              <div class="tags">
-                <span class="badge badge-default">Placeholder</span>
-                <span class="badge badge-default">Placeholder</span>
-                <span class="badge badge-default">Placeholder</span>
-              </div>
-
-              <p class="lead">This is a placeholder description. It contains no real information and is used for testing purposes only.</p>
-
-              <span class="links">
-                <a class="btn btn-secondary" href="#livelink">Live</a>
-                <a class="btn btn-secondary" href="#redmorelink">More</a>
-                <a class="btn btn-secondary" href="#githublink">Source</a>
-              </span>
-            </div>
-          </div>
-        </div>
-
       </div>
+    </nav>
+
+      <!--mt-5 to fix nav overlapping-->
+      <span class="fixed-top-nav-anchor" id="about"></span>
+      <div class='aboutme pt-5 aboutBG'>
+        <div class="container">
+          <div class="col-sm-10 push-sm-1 col-md-8 push-md-2 col-lg-6 push-lg-3">
+
+            <div class="bg-glass">
+              <p class="text">Hello! My name is Viktor Khotimchenko. I am a self-taught JavaScript developer focused on creating immersive web and game experiences. When I am not writing code, I spend as much time as I can with my friends. I love solving problems, and I adore how coding makes it consistent.</p>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <span class="fixed-top-nav-anchor" id="projects"></span>
+      <div class="jumbotron jumbotron-fluid project-full project-red">
+        <div class="container">
+          <div class="col-sm-12 col-md-8">
+            <h1 class="title display-4 text-truncate">TicTacToe</h1>
+            <div class="tags">
+              <span class="badge badge-default">JS</span>
+              <span class="badge badge-default">AI</span>
+            </div>
+            <p class="lead desc">Classic game featuring 3 AI difficulties and player vs player mode.</p>
+            <span class="links">
+              <a class="btn btn-secondary" href="http://codepen.io/v1tas/full/OmNZKm/">Live</a>
+              <a class="btn btn-secondary" href="#redmorelink">More</a>
+              <a class="btn btn-secondary" href="http://codepen.io/v1tas/pen/OmNZKm">Source</a>
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <div class="jumbotron jumbotron-fluid project-full project-PLACEHOLDER  project-yellow">
+        <div class="container">
+          <div class="col-sm-12 col-md-8">
+            <h1 class="title display-4 text-truncate">Jumbotronholder</h1>
+            <div class="tags">
+              <span class="badge badge-default">Placeholder</span>
+              <span class="badge badge-default">Placeholder</span>
+              <span class="badge badge-default">Placeholder</span>
+            </div>
+
+            <p class="lead desc">This is a placeholder description. It contains no real information and is used for testing purposes only.</p>
+
+            <span class="links">
+              <a class="btn btn-secondary" href="#livelink">Live</a>
+              <a class="btn btn-secondary" href="#redmorelink">More</a>
+              <a class="btn btn-secondary" href="#githublink">Source</a>
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <div class="jumbotron jumbotron-fluid project-full project-PLACEHOLDER project-blue">
+        <div class="container">
+          <div class="col-sm-12 col-md-8">
+            <h1 class="title display-4 text-truncate">Jumbotronholder</h1>
+            <div class="tags">
+              <span class="badge badge-default">Placeholder</span>
+              <span class="badge badge-default">Placeholder</span>
+              <span class="badge badge-default">Placeholder</span>
+            </div>
+
+            <p class="lead">This is a placeholder description. It contains no real information and is used for testing purposes only.</p>
+
+            <span class="links">
+              <a class="btn btn-secondary" href="#livelink">Live</a>
+              <a class="btn btn-secondary" href="#redmorelink">More</a>
+              <a class="btn btn-secondary" href="#githublink">Source</a>
+            </span>
+          </div>
+        </div>
+      </div>
+
       <footer class="footer mt-3 p-2 text-md-center">
         <a href="mailto:vkhotimchenko@gmail.com" class="btn btn-secondary"><i class="icon icon-mail-read"></i></a>
         <a href="https://codepen.io/v1tas" class="btn btn-secondary"><i class="icon icon-codepen"></i></a>
@@ -150,9 +149,8 @@
     <!-- build:js scripts/plugins.js -->
     <script src="/bower_components/bootstrap/js/dist/util.js"></script>
     <script src="/bower_components/bootstrap/js/dist/collapse.js"></script>
+    <script src="/bower_components/bootstrap/js/dist/scrollspy.js"></script>
     <!-- endbuild-->
-
-    <!--<script src="/bower_components/bootstrap/js/dist/scrollspy.js"></script>-->
 
     <!-- build:js scripts/main.js -->
     <script src="scripts/main.js"></script>
