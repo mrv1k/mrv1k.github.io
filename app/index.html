@@ -135,9 +135,19 @@
               <textarea name="message" class="form-control" required rows="4" data-msg="Don't be shy, write me a few lines :)" placeholder="Message"></textarea>
             </div>
             <input class="hidden-xs-up" type="text" name="_gotcha">
+            <input type="hidden" name="_next" value="#formsubmitted" />
             <button type="submit" class="btn btn-outline-success w-100 form-submit-btn">Send</button>
+
+            <h1 id="submit-success" class="collapse">
+              Message received! I'll be in touch.
+            </h1>
+
+            <div id="submit-errors" class="collapse">
+              It looks like there was an error submitting the form.
+              Please try again later.
+            </div>
             <!--redirect thank you page - change to ajax popup-->
-            <!--<input type="hidden" name="_next" value="//site.io/thanks.html" />-->
+
           </form>
           <p class="text-muted pt-3">If you're having problems with the form you can email me directly at vkhotimchenko@gmail.com.</p>
 
