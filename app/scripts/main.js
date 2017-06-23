@@ -2,8 +2,8 @@ $('.navbar-toggler').collapse();
 // override jquery validate plugin defaults
 
 $('.contact-form').validate({
-  errorClass: "help-block",
-  errorElement: "span",
+  errorClass: 'help-block',
+  errorElement: 'span',
   highlight: function(element) {
     $(element).closest('.form-group').addClass('has-danger');
     $(element).closest('input').addClass('form-control-danger');
@@ -23,17 +23,18 @@ $('.contact-form').validate({
       url: 'http://formspree.io/vkhotimchenko@gmail.com',
       method: 'POST',
       data: {
-        name: $(form).find("input[name='name']").val(),
-        _replyto: $(form).find("input[name='_replyto']").val(),
-        message: $(form).find("textarea[name='message']").val()
+        name: $(form).find('input[name=\'name\']').val(),
+        _replyto: $(form).find('input[name=\'_replyto\']').val(),
+        message: $(form).find('textarea[name=\'message\']').val()
       },
       dataType: 'json',
       success: function() {
-        $("#submit-success").fadeIn();
-        $("#contact-form").fadeOut();
+        $('.contact-form').fadeOut();
+        $('.footer .main-header').text('Message received!');
+        $('.footer .sub-header').text('I\'ll respond ASAP.');
       },
       error: function() {
-        $("#submit-errors").fadeIn();
+        $('.submit-errors').fadeIn();
       }
     });
   }
