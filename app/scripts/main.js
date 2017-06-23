@@ -29,11 +29,12 @@ $('.contact-form').validate({
       },
       dataType: 'json',
       success: function() {
-        $("#submit-success").fadeIn();
-        $("#contact-form").fadeOut();
+        $('.contact-form').fadeOut();
+        $('.footer .main-header').text("Message received!");
+        $('.footer .sub-header').text("I'll respond ASAP.");
       },
       error: function() {
-        $("#submit-errors").fadeIn();
+        $('.submit-errors').fadeIn();
       }
     });
   }

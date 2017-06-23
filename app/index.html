@@ -119,10 +119,13 @@
     <footer class="footer mt-3 p-2">
       <div class="container">
         <div class="col-sm-12 col-md-8 push-md-2 col-lg-4 push-lg-4">
-          <h1>Get in touch</h1>
-          <h2>(I'd love to hear from you)</h2>
+          <h1 class="main-header">Get in touch</h1>
+          <h2 class="sub-header">(I'd love to hear from you)</h2>
 
           <form class="contact-form pt-3" method="POST" action="http://formspree.io/vkhotimchenko@gmail.com">
+            <div class="collapse submit-errors pb-3">
+              Sorry, there was an error submitting the form. If you're having problems with the form you can email me directly at vkhotimchenko@gmail.com.
+            </div>
             <input type="hidden" name="_subject" value="Portfolio website!">
 
             <div class="form-group">
@@ -137,21 +140,9 @@
             <input class="hidden-xs-up" type="text" name="_gotcha">
             <input type="hidden" name="_next" value="#formsubmitted" />
             <button type="submit" class="btn btn-outline-success w-100 form-submit-btn">Send</button>
-
-            <h1 id="submit-success" class="collapse">
-              Message received! I'll be in touch.
-            </h1>
-
-            <div id="submit-errors" class="collapse">
-              It looks like there was an error submitting the form.
-              Please try again later.
-            </div>
-            <!--redirect thank you page - change to ajax popup-->
-
           </form>
-          <p class="text-muted pt-3">If you're having problems with the form you can email me directly at vkhotimchenko@gmail.com.</p>
 
-          <div class="text-center footer-icons">
+          <div class="text-center footer-icons pt-3">
             <a href="https://codepen.io/v1tas"><i class="icon icon-codepen"></i></a>
             <a href="https://github.com/mrv1k"><i class="icon icon-github-alt"></i></a>
             <a href="https://www.linkedin.com/in/vkhotimchenko"><i class="icon icon-linkedin2"></i></a>
