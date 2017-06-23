@@ -20,10 +20,10 @@ $('.contact-form').validate({
   },
   submitHandler: function(form) {
     $.ajax({
-      url: 'http://formspree.io/vkhotimchenko@gmail.com',
+      url: '//formspree.io/vkhotimchenko@gmail.com',
       method: 'POST',
       data: {
-        name: $(form).find('input[name=\'name\']').val(),
+        name: $(form).find('input[name=\'sender-name\']').val(),
         _replyto: $(form).find('input[name=\'_replyto\']').val(),
         message: $(form).find('textarea[name=\'message\']').val()
       },
