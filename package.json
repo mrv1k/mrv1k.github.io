@@ -1,0 +1,28 @@
+{
+  "name": "khotimchenko-portfolio",
+  "version": "1.0.1",
+  "description": "Simple portfolio website",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mrv1k/portfolio.git"
+  },
+  "keywords": [
+    "portfolio"
+  ],
+  "author": "Viktor Khotimchenko",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mrv1k/portfolio/issues"
+  },
+  "homepage": "https://mrv1k.github.io/portfolio/",
+  "dependencies": {
+    "bootstrap": "^4.0.0-beta.2",
+    "jquery": "^3.2.1",
+    "jquery-validation": "^1.17.0",
+    "popper.js": "^1.12.3"
+  }
+}
