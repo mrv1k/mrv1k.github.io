@@ -1,34 +1,4 @@
 /* general */
-.v-navbar-fix {
-  padding: 3.5rem 0;
-}
-
-.jumbotron {
-  color: #fff;
-  margin-bottom: 0;
-}
-
-.project-tictactoe {
-  background: url(../images/_grey.jpg) bottom no-repeat
-}
-
-.project-red {
-  background: url(../images/red.jpg) bottom no-repeat
-}
-
-.project-yellow {
-  background: url(../images/yellow.jpg) bottom no-repeat
-}
-
-.project-blue {
-  background: url(../images/blue.jpg) bottom no-repeat
-}
-
-.footer {
-  position: absolute;
-  width: 100%
-}
-
 .footer-icons {
   font-size: 1.5rem
 }
@@ -56,13 +26,6 @@
 
 .footer-signature {
   padding-top: 1rem
-}
-
-@media (max-width:992px) {
-  .jumbotron {
-      padding-top: 3rem;
-      padding-bottom: 3rem
-  }
 }
 
 /* fonts */
