@@ -1,8 +1,3 @@
 node_modules
-dist
-.tmp
-bower_components
-test/bower_components
-.publish
 .editorconfig
 package-lock.json
