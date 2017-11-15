@@ -1,31 +1,61 @@
+/* override bootstrap */
+.container-fluid {
+  padding: 0;
+}
+
+
 /* general */
-.footer-icons {
+.v-fullscreen-bg {
+  height: 100vh;
+  position: relative;
+  text-align: center;
+  width: 100%;
+  min-height: 350px;
+  background-color: #000;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.v-section {
+  padding: 5rem 0;
+  /* width: 100%; */
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media screen and (min-width: 576px) {
+  .v-fullscreen-bg {
+    background-image: url(../images/2.jpeg);
+  }
+}
+
+.v-footer {
+  padding: 5rem 0 3rem 0;
+}
+
+.v-footer-icons {
   font-size: 1.5rem
 }
 
-.footer-icons a {
-  color: #0a0f0d;
+.v-footer-icons a {
+  color: #fff;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  padding: .25rem .5rem;
+  padding: .5rem;
   border-radius: .25rem;
   border: 1px solid transparent
 }
 
-.footer-icons a:hover {
+.v-footer-icons a:hover {
   text-decoration: none;
   transition: all .2s ease-in-out;
-  border: 1px solid #343a40;
+  border: 1px solid #fff;
 }
 
-.form-submit-btn {
+.v-form-submit-btn {
   cursor: pointer
-}
-
-.footer-signature {
-  padding-top: 1rem
 }
 
 /* fonts */
@@ -74,8 +104,4 @@ i {
 
 .icon-stackoverflow:before {
   content: "\ead0"
-}
-
-.icon-th-menu:before {
-  content: "\e901"
 }
