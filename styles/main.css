@@ -1,34 +1,67 @@
-/* override bootstrap */
+/* Override bootstrap */
 .container-fluid {
   padding: 0;
 }
+/* Override bootstrap end*/
 
 
-/* general */
+/* Tags */
+body {
+  overflow-x: hidden;
+}
+
+a:hover {
+  text-decoration: none;
+}
+/* Tags end */
+
+
+/* Document wide */
+.v-section {
+  padding: 5rem 0;
+}
+/* Document wide end */
+
+
+/* Landing  */
 .v-fullscreen-bg {
   height: 100vh;
+  width: 100%;
   position: relative;
   text-align: center;
-  width: 100%;
-  min-height: 350px;
   background-color: #000;
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
 }
 
-.v-section {
-  padding: 5rem 0;
-  /* width: 100%; */
+.v-landing-text {
+  text-shadow: 0px 0px 3px #000;
 }
 
-/* Small devices (landscape phones, 576px and up) */
-@media screen and (min-width: 576px) {
-  .v-fullscreen-bg {
-    background-image: url(../images/bg.jpeg);
-  }
+.v-landing-btn {
+  opacity: 0;
 }
 
+.typed-cursor {
+  animation-name: blinker;
+  animation-iteration-count: infinite;
+  animation-timing-function: cubic-bezier(1,0,0,1);
+  animation-duration: 1s;
+  display: inline-block;
+  width: 2px;
+  height: 29px;
+  margin-left: 2px;
+  background: #fff;
+}
+
+@keyframes blinker {
+  from { opacity: 1; } to { opacity: 0; }
+}
+/* Landing end */
+
+
+/* Footer */
 .v-footer {
   padding: 5rem 0 3rem 0;
 }
@@ -49,16 +82,17 @@
 }
 
 .v-footer-icons a:hover {
-  text-decoration: none;
   transition: all .2s ease-in-out;
   border: 1px solid #fff;
 }
 
 .v-form-submit-btn {
-  cursor: pointer
+  cursor: pointer;
 }
+/* Footer end */
 
-/* fonts */
+
+/* Fonts */
 @font-face {
   font-family: icomoon;
   src: url(../fonts/icomoon/icomoon.ttf) format("truetype"), url(../fonts/icomoon/icomoon.woff) format("woff"), url(../fonts/icomoon/icomoon.svg) format("svg");
@@ -105,3 +139,19 @@ i {
 .icon-stackoverflow:before {
   content: "\ead0"
 }
+/* Fonts end */
+
+
+/* Media queries */
+/* Small devices (landscape phones, 576px and up) */
+@media screen and (min-width: 576px) {
+  .v-fullscreen-bg {
+    background-image:
+    radial-gradient(
+      rgba(0,0,0,0.1),
+      rgba(0,0,0,0.05)
+    ),
+    url(../images/bg.jpeg);
+  }
+}
+/* Media queries end*/

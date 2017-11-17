@@ -12,15 +12,40 @@
   <!-- Bootstrap core CSS -->
   <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
 
-  <!-- Custom styles for this template -->
+  <!-- Custom styles -->
   <link rel="stylesheet" href="styles/main.css">
 </head>
 
 <body>
 
-  <!-- <div class="v-brand">mrv1k</div> -->
-
-  <div id="landing" class=" v-fullscreen-bg"></div>
+  <div class="container-flex">
+    <div id="landing" class="mh-100 mw-100 v-fullscreen-bg">
+      <div class="container h-100 text-light">
+        <div class="row h-25 justify-content-center">
+          <div class="col-4 pt-4">
+            <div class="v-logo">mrv1k</div>
+          </div>
+        </div>
+        <div class="row h-50 justify-content-center align-items-center">
+          <div class="col-10">
+            <div class="h1 font-weight-bold v-landing-text pb-3">
+              <div>Hi, I'm Viktor.</div>
+              <div class="v-landing-text-typed d-inline"></div>
+            </div>
+            <a class="btn btn-warning text-uppercase  font-weight-bold v-landing-btn" href="#contact">Yes, I can write code for you</a>
+          </div>
+        </div>
+        <div class="row h-25 justify-content-center align-items-end v-landing-more">
+          <div class="col-4">
+            <a class="pb-5 text-light" href="#about">
+              Tell me more
+              <div class="h2">&#8595;</div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <main role="main">
 
@@ -28,7 +53,7 @@
       <div class="container">
         <div class="row justify-content-center mb-4">
           <div class="col-md-8">
-            <h1 class="display-5">My Experience</h1>
+            <h1 class="display-5">About me</h1>
             <p class="lead">Waddup?</p>
           </div>
         </div>
@@ -110,12 +135,12 @@
 
       <div class="row justify-content-center text-center pt-5">
         <div class="col-8">
-          <div class="v-footer-icons">
-            <a href="https://codepen.io/v1tas"><i class="icon icon-codepen"></i></a>
-            <a href="https://github.com/mrv1k"><i class="icon icon-github-alt"></i></a>
-            <a href="https://www.linkedin.com/in/vkhotimchenko"><i class="icon icon-linkedin2"></i></a>
-            <a href="tel://1-289-380-6673"><i class="icon icon-phone"></i></a>
-          </div>
+            <div class="v-footer-icons">
+                <a href="https://codepen.io/v1tas"><i class="icon icon-codepen"></i></a>
+                <a href="https://github.com/mrv1k"><i class="icon icon-github-alt"></i></a>
+                <a href="https://www.linkedin.com/in/vkhotimchenko"><i class="icon icon-linkedin2"></i></a>
+                <a href="tel://1-289-380-6673"><i class="icon icon-phone"></i></a>
+              </div>
           <div class="text-muted pt-3">© 2017 Viktor Khotimchenko</div>
         </div>
       </div>
@@ -139,9 +164,14 @@
     ga('send', 'pageview');
   </script>
 
-  <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
+  <script src="node_modules/jquery/dist/jquery.min.js"></script>
   <script src="node_modules/popper.js/dist/umd/popper-utils.min.js"></script>
   <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="node_modules/jquery-validation/dist/jquery.validate.min.js"></script>
+  <script src="node_modules/typed.js/lib/typed.min.js"></script>
+
+  <!-- Custom script -->
+  <script src="scripts/main.js"></script>
 </body>
 
 </html>
