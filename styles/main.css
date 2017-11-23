@@ -35,6 +35,24 @@ a:hover {
   background-repeat: no-repeat;
 }
 
+.v-logo-box {
+  background: #ffca46;
+  width: 56px;
+  height: 56px;
+  margin: 0 auto;
+  color: #0a0f0d;
+  border-radius: 5px;
+}
+
+.v-logo-mr {
+  display: inline-block;
+  /* transform: rotate(270deg); */
+}
+
+.v-logo-v1k {
+  line-height: 56px;
+}
+
 .v-landing-text {
   text-shadow: 0px 0px 3px #000;
 }
