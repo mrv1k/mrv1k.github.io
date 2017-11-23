@@ -4,6 +4,24 @@
 }
 /* Override bootstrap end*/
 
+/* Colour scheme
+
+  red    cc2936;
+  yellow fcca46;
+  blue   003d5b;
+  gray   eeeeee;
+*/
+.v-bg-yellow {
+  background-color: #fcca46;
+}
+
+.v-bg-grey {
+  background-color: #e0e0e0;
+}
+
+.v-bg-dark {
+  background-color: #1b1b1b;
+}
 
 /* Tags */
 body {
@@ -36,11 +54,10 @@ a:hover {
 }
 
 .v-logo-box {
-  background: #ffca46;
+  background: #fcca46;
   width: 56px;
   height: 56px;
   margin: 0 auto;
-  color: #0a0f0d;
   border-radius: 5px;
 }
 
@@ -59,6 +76,20 @@ a:hover {
 
 .v-landing-btn {
   opacity: 0;
+  color: #111;
+  background-color: #fcca46;
+  border-color: #fcca46;
+}
+
+.v-landing-btn:hover {
+  color: #111;
+  background-color: #ffc107;
+  border-color: #ffc107;
+  font-weight: 600;
+}
+
+.v-landing-btn:focus {
+  box-shadow: 0 0 0 0.2rem rgba(255, 193, 7, 0.5);
 }
 
 .typed-cursor {
