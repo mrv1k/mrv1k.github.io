@@ -1,4 +1,7 @@
 /* Override bootstrap */
+.row {
+  justify-content: center;
+}
 .container-fluid {
   padding: 0;
 }
@@ -109,6 +112,16 @@ a:hover {
 }
 /* Landing end */
 
+
+/* Project start */
+.v-project-img {
+  border-radius: 6px;
+}
+
+.v-project-desc {
+  font-size: 14px;
+}
+/* Project end */
 
 /* Footer */
 .v-footer {
