@@ -87,7 +87,7 @@ a:hover {
 }
 
 .v-landing-text {
-  text-shadow: 0px 0px 3px #000;
+  text-shadow: 0 0 3px #343a40;
 }
 
 .v-landing-btn {
@@ -125,20 +125,17 @@ a:hover {
 }
 
 .v-landing-more {
-  color: #868e96;
+  color: #fcca46;
+}
+
+.v-landing-more:hover {
+  color: #fcca46;
+  text-decoration: underline;
 }
 
 .v-landing-arrow {
-  stroke: #868e96;
+  stroke: rgba(255, 193, 7, 1);
 }
-
-.v-landing-more-glob :hover > .v-landing-arrow,
-.v-landing-more-glob :hover {
-  stroke: #fff;
-  color: #fff;
-}
-
-
 /* Landing end */
 
 
@@ -184,9 +181,24 @@ a:hover {
     background-image:
     radial-gradient(
       rgba(0,0,0,0.1),
-      rgba(0,0,0,0.05)
+      rgba(0,0,0,0.5)
     ),
     url(../images/bg.jpeg);
+  }
+
+  .v-landing-more {
+    color: rgba(255, 193, 7, 0.8);
+    text-shadow: 0px 0px 1px #343a40;
+  }
+  .v-landing-more:hover {
+    color: rgba(255, 193, 7, 1);
+  }
+
+  .v-landing-arrow {
+    stroke: rgba(255, 193, 7, 0.8);
+  }
+  .v-landing-more-glob :hover > .v-landing-arrow {
+    stroke: rgba(255, 193, 7, 1);
   }
 }
 /* Media queries end*/
