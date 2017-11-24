@@ -143,81 +143,25 @@ a:hover {
   padding: 5rem 0 3rem 0;
 }
 
-.v-footer-icons {
-  font-size: 1.5rem
+.v-svg-icon {
+  width: 30px;
+  height: 30px;
+  fill: #868e96;
 }
 
-.v-footer-icons a {
-  color: #fff;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  padding: .5rem;
-  border-radius: .25rem;
-  border: 1px solid transparent
-}
-
-.v-footer-icons a:hover {
-  transition: all .2s ease-in-out;
-  border: 1px solid #fff;
+.v-svg-icon:hover {
+  transition: all .5s ease-in-out;
+  fill: #fff;
 }
 
 .v-form-submit-btn {
   cursor: pointer;
 }
+
+.v-footer-copyright {
+  font-size: 0.9rem;
+}
 /* Footer end */
-
-
-/* Icon Font */
-@font-face {
-  font-family: icomoon;
-  src: url(../fonts/icomoon/icomoon.ttf) format("truetype"), url(../fonts/icomoon/icomoon.woff) format("woff"), url(../fonts/icomoon/icomoon.svg) format("svg");
-  font-weight: 400;
-  font-style: normal
-}
-
-i {
-  font-family: icomoon!important;
-  speak: none;
-  font-style: normal;
-  font-weight: 400;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale
-}
-
-.icon-codepen:before {
-  content: "\e900"
-}
-
-.icon-github-alt:before {
-  content: "\e902"
-}
-
-.icon-mail-read:before {
-  content: "\f03c"
-}
-
-.icon-phone:before {
-  content: "\e942"
-}
-
-.icon-twitter:before {
-  content: "\ea96"
-}
-
-.icon-linkedin2:before {
-  content: "\eaca"
-}
-
-.icon-stackoverflow:before {
-  content: "\ead0"
-}
-/* Icon Font ends */
-
 
 /* Media queries */
 /* Small devices (landscape phones, 576px and up) */
