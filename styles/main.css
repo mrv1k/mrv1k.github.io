@@ -123,6 +123,22 @@ a:hover {
 @keyframes blinker {
   from { opacity: 1; } to { opacity: 0; }
 }
+
+.v-landing-more {
+  color: #868e96;
+}
+
+.v-landing-arrow {
+  stroke: #868e96;
+}
+
+.v-landing-more-glob :hover > .v-landing-arrow,
+.v-landing-more-glob :hover {
+  stroke: #fff;
+  color: #fff;
+}
+
+
 /* Landing end */
 
 
