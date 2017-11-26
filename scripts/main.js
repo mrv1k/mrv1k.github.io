@@ -13,6 +13,7 @@ $(document).ready(() => {
 
   const typed = new Typed(".v-landing-text-typed", typedOptions);
 
+
   // Smooth scroll
 
   // jQuery Easing
@@ -25,7 +26,7 @@ $(document).ready(() => {
     return c / 2 * (-Math.pow(2, -10 * --t) + 2) + b;
   }
 
-  const $scroll = $('.v-landing-btn, .v-landing-more');
+  const $scroll = $('.v-landing-btn, .v-landing-more, .v-about-work');
   const $root = $('html, body');
 
   $scroll.click(function (event) {
@@ -76,7 +77,7 @@ $(document).ready(() => {
         success: function () {
           $('.contact-form').fadeOut();
           $('.footer .main-header').text('Message received!');
-          $('.footer .sub-header').text('I\'ll respond ASAP.');
+          $('.footer .sub-header').text('I\'ll respond within 24 hours.');
         },
         error: function () {
           $('.submit-errors').fadeIn();
