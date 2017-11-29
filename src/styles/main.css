@@ -183,7 +183,7 @@ a:hover {
       rgba(0,0,0,0.1),
       rgba(0,0,0,0.5)
     ),
-    url(../images/bg.jpeg);
+    url(./../images/bg.jpeg);
   }
 
   .v-landing-more {

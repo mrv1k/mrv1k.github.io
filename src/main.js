@@ -1,3 +1,8 @@
+import typed from 'typed.js';
+import './styles/main.css';
+// import $validation from 'jquery-validation';
+
+
 $(document).ready(() => {
   // Type & erase text effect
   const typedOptions = {
