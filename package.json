@@ -4,7 +4,8 @@
   "description": "Portfolio website",
   "main": "src/main.js",
   "scripts": {
-    "build": "webpack"
+    "start": "webpack-dev-server --open --config webpack.dev.js",
+    "build": "webpack --config webpack.prod.js"
   },
   "repository": {
     "type": "git",
@@ -14,7 +15,7 @@
     "portfolio"
   ],
   "author": "Viktor Khotimchenko",
-  "license": "none",
+  "license": "ISC",
   "homepage": "https://mrv1k.github.io",
   "dependencies": {
     "bootstrap": "^4.0.0-beta.2",
@@ -30,6 +31,10 @@
     "html-loader": "^0.5.1",
     "html-webpack-plugin": "^2.30.1",
     "style-loader": "^0.19.0",
-    "webpack": "^3.8.1"
+    "uglifyjs-webpack-plugin": "^1.1.1",
+    "webpack": "^3.8.1",
+    "webpack-dev-server": "^2.9.5",
+    "webpack-merge": "^4.1.1",
+    "webpack-visualizer-plugin": "^0.1.11"
   }
 }
