@@ -1,7 +1,10 @@
-import typed from 'typed.js';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './styles/main.css';
-// import $validation from 'jquery-validation';
 
+import Typed from 'typed.js';
+import 'jquery-validation';
+
+console.log($.validate);
 
 $(document).ready(() => {
   // Type & erase text effect
