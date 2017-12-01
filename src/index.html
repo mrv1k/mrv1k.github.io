@@ -139,58 +139,64 @@
       </div>
     </div>
 
+    <div id="contact" class="text-light v-section v-bg-dark">
+      <div class="container">
+        <div class="row text-center">
+          <div class="col-8">
+            <h1 class="v-footer-header">Get in touch</h1>
+            <h2 class="lead v-footer-sub">Say hello and let's chat!</h2>
+          </div>
+        </div>
+
+        <div class="row pt-3">
+          <div class="col-8">
+            <div class="card text-center bg-danger mb-3 submit-errors d-none">
+              <div class="card-body">
+                <h4 class="card-title">An error submitting the form</h4>
+                <p class="card-text">You can email me directly at vkhotimchenko@gmail.com</p>
+              </div>
+            </div>
+
+
+            <form class="v-contact-form" method="POST" action="//formspree.io/vkhotimchenko@gmail.com">
+              <input type="hidden" name="_subject" value="Portfolio website!">
+              <div class="form-row pb-3">
+                <div class="col">
+                  <input name="sender-name" class="form-control" type="text" required aria-describedby="Your name" data-msg="Please fill in your name"
+                    placeholder="Name*">
+                </div>
+                <div class="col">
+                  <input name="_replyto" class="form-control" type="email" required aria-describedby="Your email" data-msg="Please fill in your email"
+                    placeholder="Email address*">
+                </div>
+              </div>
+              <div class="form-row pb-3">
+                <div class="col">
+                  <textarea name="message" class="form-control" required rows="4" data-msg="Sorry, it looks like you didn't write anything"
+                    placeholder="How can I be of service?*"></textarea>
+                </div>
+              </div>
+              <input class="d-none" type="text" name="_gotcha">
+              <input type="hidden" name="_next" value="#formsubmitted" />
+              <div class="form-row">
+                <div class="col"></div>
+                <div class="col">
+                  <button type="submit" class="btn btn-light w-100 v-form-submit-btn">Send</button>
+                </div>
+                <div class="col"></div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
   </main>
   <!-- /.container -->
 
-
-  <footer id="contact" class="footer text-light v-footer v-bg-dark pb-3">
+  <footer class="py-3 v-footer v-bg-dark">
     <div class="container">
       <div class="row text-center">
-        <div class="col-8">
-          <h1>Get in touch</h1>
-          <h2 class="lead">Say hello and let's chat!</h2>
-        </div>
-      </div>
-
-      <div class="row pt-3">
-        <div class="col-8">
-          <form class="contact-form" method="POST" action="//formspree.io/vkhotimchenko@gmail.com">
-            <div class="form-row">
-              <div class="collapse submit-errors">
-                Sorry, there was an error submitting the form. You can mail me directly at vkhotimchenko@gmail.com.
-              </div>
-            </div>
-            <input type="hidden" name="_subject" value="Portfolio website!">
-            <div class="form-row pb-3">
-              <div class="col">
-                <input name="sender-name" class="form-control" type="text" required aria-describedby="Your name" data-msg="Please fill in your name"
-                  placeholder="Name*">
-              </div>
-              <div class="col">
-                <input name="_replyto" class="form-control" type="email" required aria-describedby="Your email" data-msg="Please fill in your email"
-                  placeholder="Email address*">
-              </div>
-            </div>
-            <div class="form-row pb-3">
-              <div class="col">
-                <textarea name="message" class="form-control" required rows="4" data-msg="Sorry, it looks like you didn't write anything"
-                  placeholder="How can I be of service?*"></textarea>
-              </div>
-            </div>
-            <input class="d-none" type="text" name="_gotcha">
-            <input type="hidden" name="_next" value="#formsubmitted" />
-            <div class="form-row">
-              <div class="col"></div>
-              <div class="col">
-                <button type="submit" class="btn btn-light w-100 v-form-submit-btn">Send</button>
-              </div>
-              <div class="col"></div>
-            </div>
-          </form>
-        </div>
-      </div>
-
-      <div class="row text-center pt-4">
         <div class="col-8">
           <div class="v-footer-icons">
             <a href="https://github.com/mrv1k" target="_blank" role="button">
@@ -208,7 +214,7 @@
               </svg>
             </a>
           </div>
-          <div class="text-muted v-footer-copyright pt-2">
+          <div class="text-muted pt-2 v-footer-text">
             Built using
             <a href="https://getbootstrap.com/">bootstrap</a>,
             <a href="https://jquery.com/">jquery</a>,

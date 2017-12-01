@@ -1,8 +1,8 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './styles/main.css';
 
-import $ from 'jquery';
 import Typed from 'typed.js';
+import $ from 'jquery';
 import 'jquery-validation';
 
 // Type & erase text effect
@@ -49,23 +49,9 @@ $scroll.click(function (event) {
 
 
 // override jquery validate plugin defaults
-$('.contact-form').validate({
-  errorClass: 'help-block',
+$('.v-contact-form').validate({
+  errorClass: 'form-text',
   errorElement: 'span',
-  highlight: function (element) {
-    $(element).closest('.form-group').addClass('has-danger');
-    $(element).closest('input').addClass('form-control-danger');
-    $('.btn.btn-outline-success').removeClass('btn-outline-success').addClass('btn-outline-danger');
-  },
-  unhighlight: function (element) {
-    $(element).closest('.form-group').removeClass('has-danger');
-    $(element).closest('input').removeClass('form-control-danger');
-  },
-  success: function (element) {
-    $(element).closest('.form-group').addClass('has-success');
-    $(element).closest('input').addClass('form-control-success');
-    $('.btn.btn-outline-danger').removeClass('btn-outline-danger').addClass('btn-outline-success');
-  },
   submitHandler: function (form) {
     $.ajax({
       url: '//formspree.io/vkhotimchenko@gmail.com',
@@ -77,12 +63,12 @@ $('.contact-form').validate({
       },
       dataType: 'json',
       success: function () {
-        $('.contact-form').fadeOut();
-        $('.footer .main-header').text('Message received!');
-        $('.footer .sub-header').text('I\'ll respond within 24 hours.');
+        $('.v-contact-form').fadeOut();
+        $('.v-footer-header').text('Message sent!');
+        $('.v-footer-sub').text('I\'ll respond within 24 hours.');
       },
       error: function () {
-        $('.submit-errors').fadeIn();
+        $('.submit-errors').removeClass('d-none');
       }
     });
   }

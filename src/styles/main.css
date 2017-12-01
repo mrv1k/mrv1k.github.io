@@ -18,6 +18,10 @@ body {
 .container-fluid {
   padding: 0;
 }
+
+.form-text {
+  margin-top: 0;
+}
 /* Override bootstrap end*/
 
 /* Colour scheme
@@ -149,9 +153,15 @@ a:hover {
 }
 /* Project end */
 
+/* Contact form */
+.v-form-submit-btn {
+  cursor: pointer;
+}
+/* Contact form end*/
+
 /* Footer */
 .v-footer {
-  padding: 5rem 0 3rem 0;
+  border-top: 1px solid #3a3e3d;
 }
 
 .v-svg-icon {
@@ -162,15 +172,15 @@ a:hover {
 
 .v-svg-icon:hover {
   transition: all .5s ease-in-out;
-  fill: #fff;
+  fill: #e0e0e0;
 }
 
-.v-form-submit-btn {
-  cursor: pointer;
-}
-
-.v-footer-copyright {
+.v-footer-text {
   font-size: 0.9rem;
+}
+
+.v-footer-text a {
+  color: #868e96;
 }
 /* Footer end */
 
