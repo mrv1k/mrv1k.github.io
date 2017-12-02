@@ -1,7 +1,6 @@
 const path = require('path');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const Visualizer = require('webpack-visualizer-plugin');
 
 const config = {
   entry: './src/main.js',
@@ -41,9 +40,6 @@ const config = {
   plugins: [
     new HtmlWebpackPlugin({
       template: 'src/index.html'
-    }),
-    new Visualizer({
-      filename: './statistics.html'
     })
   ]
 };
