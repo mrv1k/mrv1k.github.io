@@ -24,12 +24,12 @@ body {
 }
 /* Override bootstrap end*/
 
-/* Colour scheme
-
+/* Colour scheme:
   red    cc2936;
   yellow fcca46;
   blue   003d5b;
   gray   eeeeee;
+  black  1b1b1b;
 */
 .v-bg-yellow {
   background-color: #fcca46;
@@ -165,13 +165,13 @@ a:hover {
 }
 
 .v-svg-icon {
-  width: 30px;
-  height: 30px;
   fill: #868e96;
+  margin: 0.2em;
+  width: 2.1em;
 }
 
 .v-svg-icon:hover {
-  transition: all .5s ease-in-out;
+  transition: all .5s ease-in;
   fill: #e0e0e0;
 }
 
