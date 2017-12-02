@@ -3,7 +3,6 @@ import './styles/main.css';
 
 import Typed from 'typed.js';
 import $ from 'jquery';
-import 'jquery-validation';
 
 // Type & erase text effect
 const typedOptions = {
@@ -48,28 +47,36 @@ $scroll.click(function (event) {
 });
 
 
-// override jquery validate plugin defaults
-$('.v-contact-form').validate({
-  errorClass: 'form-text',
-  errorElement: 'span',
-  submitHandler: function (form) {
-    $.ajax({
-      url: '//formspree.io/vkhotimchenko@gmail.com',
-      method: 'POST',
-      data: {
-        name: $(form).find('input[name=\'sender-name\']').val(),
-        _replyto: $(form).find('input[name=\'_replyto\']').val(),
-        message: $(form).find('textarea[name=\'message\']').val()
-      },
-      dataType: 'json',
-      success: function () {
-        $('.v-contact-form').fadeOut();
-        $('.v-footer-header').text('Message sent!');
-        $('.v-footer-sub').text('I\'ll respond within 24 hours.');
-      },
-      error: function () {
-        $('.submit-errors').removeClass('d-none');
+function makeRequest(e) {
+  e.preventDefault();
+
+  const form = document.forms[0];
+  if (form.checkValidity()) {
+    const request = new XMLHttpRequest();
+    const formData = new FormData(form);
+    request.open('POST', 'https://formspree.io/vkhotimchenko@gmail.com');
+    request.setRequestHeader('accept', 'application/json');
+    request.send(formData);
+
+    request.onreadystatechange = function () {
+      if (request.status == 200) {
+        form.classList.add('d-none');
+        document.querySelector('.v-footer-header').textContent = 'Message sent!';
+        document.querySelector('.v-footer-sub').textContent = 'I\'ll respond within 24 hours.';
+      } else {
+        document.querySelector('.submit-errors').classList.remove('d-none');
+      }
+    }
+  } else {
+    form.querySelectorAll(['*:required']).forEach((el) => {
+      if (el.checkValidity()) {
+        if (el.classList.contains('is-invalid')) el.classList.remove('is-invalid');
+        el.classList.add('is-valid');
+      } else {
+        el.classList.add('is-invalid');
       }
     });
   }
-});
+}
+
+document.querySelector('.v-form-submit-btn').addEventListener('click', makeRequest);

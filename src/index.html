@@ -159,21 +159,21 @@
 
 
             <form class="v-contact-form" method="POST" action="//formspree.io/vkhotimchenko@gmail.com">
-              <input type="hidden" name="_subject" value="Portfolio website!">
+              <input type="hidden" name="_subject" value="mrv1k.io" />
               <div class="form-row pb-3">
                 <div class="col">
-                  <input name="sender-name" class="form-control" type="text" required aria-describedby="Your name" data-msg="Please fill in your name"
-                    placeholder="Name*">
+                  <input class="form-control v-form-name" name="name" type="text" required aria-describedby="Your name" placeholder="Name*">
+                  <span class="invalid-feedback">Please fill in your name</span>
                 </div>
                 <div class="col">
-                  <input name="_replyto" class="form-control" type="email" required aria-describedby="Your email" data-msg="Please fill in your email"
-                    placeholder="Email address*">
+                  <input class="form-control v-form-email" name="_replyto" type="email" required aria-describedby="Your email" placeholder="Email address*">
+                  <span class="invalid-feedback">Please fill in your email</span>
                 </div>
               </div>
               <div class="form-row pb-3">
                 <div class="col">
-                  <textarea name="message" class="form-control" required rows="4" data-msg="Sorry, it looks like you didn't write anything"
-                    placeholder="How can I be of service?*"></textarea>
+                  <textarea class="form-control" name="message" required rows="4"placeholder="How can I be of service?*"></textarea>
+                  <span class="invalid-feedback">Sorry, it looks like you didn't write anything</span>
                 </div>
               </div>
               <input class="d-none" type="text" name="_gotcha">
@@ -181,7 +181,7 @@
               <div class="form-row">
                 <div class="col"></div>
                 <div class="col">
-                  <button type="submit" class="btn btn-light w-100 v-form-submit-btn">Send</button>
+                  <button type="" class="btn btn-light w-100 v-form-submit-btn">Send</button>
                 </div>
                 <div class="col"></div>
               </div>
@@ -202,7 +202,8 @@
             <a href="https://www.linkedin.com/in/vkhotimchenko" target="_blank" role="button">
               <svg class="v-svg-icon v-svg-linkedin" width="32" width="32" role="img" viewBox="0 0 24 24">
                 <title>LinkedIn icon</title>
-                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
+                />
               </svg>
             </a>
             <a href="https://github.com/mrv1k" target="_blank" role="button">
