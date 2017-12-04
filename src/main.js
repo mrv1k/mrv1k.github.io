@@ -49,9 +49,14 @@ $scroll.click(function (event) {
 
 function makeRequest(e) {
   e.preventDefault();
+  const errorNote = document.querySelector('.submit-errors');
 
   const form = document.forms[0];
   if (form.checkValidity()) {
+    if (!errorNote.classList.contains('d-none')) {
+      errorNote.classList.add('d-none');
+    }
+
     const request = new XMLHttpRequest();
     const formData = new FormData(form);
     request.open('POST', 'https://formspree.io/vkhotimchenko@gmail.com');
@@ -64,7 +69,7 @@ function makeRequest(e) {
         document.querySelector('.v-footer-header').textContent = 'Message sent!';
         document.querySelector('.v-footer-sub').textContent = 'I\'ll respond within 24 hours.';
       } else {
-        document.querySelector('.submit-errors').classList.remove('d-none');
+        errorNote.classList.remove('d-none');
       }
     }
   } else {
