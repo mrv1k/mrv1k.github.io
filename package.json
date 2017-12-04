@@ -6,7 +6,8 @@
   "scripts": {
     "start": "webpack-dev-server --open --config webpack.dev.js",
     "build": "webpack --config webpack.prod.js",
-    "deploy": "gh-pages -d dist -b master -m 'Uses dev commit_SHA'"
+    "predeploy": "npm run build",
+    "deploy": "node ghpages.js"
   },
   "repository": {
     "type": "git",
@@ -29,6 +30,7 @@
     "css-loader": "^0.28.7",
     "file-loader": "^1.1.5",
     "gh-pages": "^1.1.0",
+    "git-last-commit": "^0.3.0",
     "html-loader": "^0.5.1",
     "html-webpack-plugin": "^2.30.1",
     "style-loader": "^0.19.0",
