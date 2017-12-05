@@ -1,5 +1,5 @@
 const merge = require('webpack-merge');
-const common = require('./webpack.common.js');
+const common = require('./webpack.config.common.js');
 const webpack = require('webpack');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
@@ -9,14 +9,14 @@ module.exports = merge(common, {
   plugins: [
     new CleanWebpackPlugin(['dist']),
     new webpack.DefinePlugin({
-      'process.env.NODE_ENV': JSON.stringify('production')
+      'process.env.NODE_ENV': JSON.stringify('production'),
     }),
     new UglifyJSPlugin({
-      sourceMap: true
-    })
+      sourceMap: true,
+    }),
   ],
   performance: {
-    hints: "warning"
-  }
+    hints: 'warning',
+  },
 });
 
