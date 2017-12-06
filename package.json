@@ -21,8 +21,7 @@
   "homepage": "https://mrv1k.github.io",
   "dependencies": {
     "bootstrap": "^4.0.0-beta.2",
-    "jquery": "^3.2.1",
-    "popper.js": "^1.12.9",
+    "smooth-scroll": "^12.1.5",
     "typed.js": "^2.0.6"
   },
   "devDependencies": {
@@ -42,5 +41,9 @@
     "webpack-dev-server": "^2.9.5",
     "webpack-merge": "^4.1.1",
     "webpack-visualizer-plugin": "^0.1.11"
+  },
+  "peerDependencies": {
+    "jquery": "^3.2.1",
+    "popper.js": "^1.12.9"
   }
 }

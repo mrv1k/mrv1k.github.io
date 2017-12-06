@@ -16,7 +16,7 @@ module.exports = merge(common, {
     }),
   ],
   performance: {
-    hints: 'warning',
+    hints: 'error',
   },
 });
 

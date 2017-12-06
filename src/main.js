@@ -1,5 +1,5 @@
 import Typed from 'typed.js';
-import $ from 'jquery';
+import SmoothScroll from 'smooth-scroll';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './styles/main.css';
@@ -18,39 +18,11 @@ const typedOptions = {
   },
 };
 
-// eslint-disable-next-line no-unused-vars
-const typed = new Typed('.v-landing-text-typed', typedOptions); // that's how library works
-
-
-// Smooth scroll
-
-/* eslint-disable */
-// jQuery Easing
-//  * Copyright 2008 George McGinley Smith
-//  * All rights reserved.
-$.easing.easeInOutExpo = function (x, t, b, c, d) {
-  if (t == 0) return b;
-  if (t == d) return b + c;
-  if ((t /= d / 2) < 1) return c / 2 * Math.pow(2, 10 * (t - 1)) + b;
-  return c / 2 * (-Math.pow(2, -10 * --t) + 2) + b;
-}
-/* eslint-enable */
-
-const $scroll = $('.v-landing-btn, .v-landing-more, .v-about-work');
-const $root = $('html, body');
-
-function scrollTo(event) {
-  const href = $(this.hash);
-  event.preventDefault();
-
-  $root.animate({ scrollTop: href.offset().top }, {
-    duration: 1000,
-    easing: 'easeInOutExpo',
-  });
-}
-
-$scroll.click(scrollTo);
-
+/* eslint-disable no-unused-vars */
+// Libraries require object instantiation to work
+const typed = new Typed('.v-landing-text-typed', typedOptions);
+const scroll = new SmoothScroll('a[href*="#"]'); // Smooth scroll
+/* eslint-disable no-unused-vars */
 
 function makeRequest(e) {
   e.preventDefault();
