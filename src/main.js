@@ -12,7 +12,9 @@ const typedOptions = {
   backSpeed: 50,
   cursorChar: '',
   onComplete: () => {
-    $('.v-landing-btn').fadeTo('slow', 1);
+    const landBtnCss = document.querySelector('.v-landing-btn').classList;
+    landBtnCss.add('v-opacity-anim-1s');
+    landBtnCss.remove('v-opacity-0');
   },
 };
 
@@ -52,12 +54,15 @@ $scroll.click(scrollTo);
 
 function makeRequest(e) {
   e.preventDefault();
-  const errorNote = document.querySelector('.submit-errors');
+  const errorNoteCss = document.querySelector('.v-form-error').classList;
 
   const form = document.forms[0];
   if (form.checkValidity()) {
-    if (!errorNote.classList.contains('d-none')) {
-      errorNote.classList.add('d-none');
+    if (errorNoteCss.contains('v-opacity-anim-1s') === true) {
+      errorNoteCss.add('v-opacity-0');
+      setTimeout(() => {
+        errorNoteCss.add('v-wh-0');
+      }, 1111);
     }
 
     const request = new XMLHttpRequest();
@@ -72,7 +77,9 @@ function makeRequest(e) {
         document.querySelector('.v-footer-header').textContent = 'Message sent!';
         document.querySelector('.v-footer-sub').textContent = 'I\'ll respond within 24 hours.';
       } else {
-        errorNote.classList.remove('d-none');
+        errorNoteCss.remove('v-wh-0');
+        errorNoteCss.remove('v-opacity-0');
+        errorNoteCss.add('v-opacity-anim-1s');
       }
     };
   } else {

@@ -58,6 +58,28 @@ a:hover {
 .v-section {
   padding: 5rem 0;
 }
+
+.v-opacity-0 {
+  opacity: 0;
+}
+
+.v-opacity-1 {
+  opacity: 1;
+}
+
+.v-opacity-anim-1s {
+  transition: opacity 1s;
+}
+
+/* simulate display: none */
+.v-wh-0 {
+  width: 0;
+  height: 0;
+  line-height:0;
+  overflow: hidden;
+  border: none;
+}
+
 /* Document wide end */
 
 
@@ -81,12 +103,7 @@ a:hover {
   border-radius: 5px;
 }
 
-.v-logo-mr {
-  display: inline-block;
-  /* transform: rotate(270deg); */
-}
-
-.v-logo-v1k {
+.v-logo-mrv1k {
   line-height: 56px;
 }
 
@@ -95,7 +112,6 @@ a:hover {
 }
 
 .v-landing-btn {
-  opacity: 0;
   color: #111;
   background-color: #fcca46;
   border-color: #fcca46;
