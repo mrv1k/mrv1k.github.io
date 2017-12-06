@@ -9,7 +9,7 @@ git.getLastCommit((err, commit) => {
   console.log(`${commit.shortHash} vs ${myShortHash}`);
 
   if (commit.shortHash === myShortHash) {
-    ghpages.publish('dist', {
+    ghpages.publish('app', {
       branch: 'master', // self named github repos must be hosted from master
       message: `dev @ ${myShortHash}`,
       dotfiles: true, // include .gitignore to avoid github node_modules issues
