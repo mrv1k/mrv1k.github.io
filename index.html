@@ -10,7 +10,7 @@
   <title>Viktor Khotimchenko | JS Developer</title>
 
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400|Oswald:400,700" rel="stylesheet">
-</head>
+<link href="main.css" rel="stylesheet"></head>
 
 <body>
 
@@ -20,8 +20,8 @@
         <div class="row h-25">
           <div class="col-4 pt-4">
             <div class="v-logo-box align-self-center">
-              <div class="v-logo-v1k">
-                <div class="v-logo-mr">mr</div>v1k
+              <div class="v-logo-mrv1k">
+                <span class="v-logo-mr">mr</span><span class="v-logo-v1k">v1k</span>
               </div>
             </div>
           </div>
@@ -32,12 +32,14 @@
               <div>Hi, I'm Viktor.</div>
               <div class="d-inline v-landing-text-typed"></div>
             </div>
-            <a class="btn text-uppercase v-landing-btn" href="#contact">Yes, I can write code for you</a>
+            <a class="btn text-uppercase v-landing-btn v-opacity-0" data-scroll href="#contact">
+              Yes, I can write code for you
+            </a>
           </div>
         </div>
         <div class="row h-25 align-items-end v-landing-more-glob pb-4">
           <div class="col-4">
-            <a class="v-landing-more" href="#about">
+            <a class="v-landing-more" data-scroll href="#about">
               Learn more about me
               <br>
               <svg class="v-landing-arrow" width="30px" height="30px" viewBox="0 0 10 10" xml:space="preserve">
@@ -72,7 +74,7 @@
             <br> I help clients build JavaScript applications.
             <br> When I am not coding, you can find me spending time with friends.
             <br> Want to work together? I would love to
-            <a href="#contact" class="v-about-work">hear from you</a>.
+            <a class="v-about-work" data-scroll href="#contact">hear from you</a>.
           </div>
           <div class="col-3 text-secondary">
             <p class="lead">Life</p>
@@ -149,7 +151,7 @@
 
         <div class="row pt-3">
           <div class="col-8">
-            <div class="card text-center bg-danger mb-3 submit-errors d-none">
+            <div class="card text-center bg-danger mb-3 v-form-error v-wh-0 v-opacity-0">
               <div class="card-body">
                 <h4 class="card-title">An error submitting the form</h4>
                 <p class="card-text">You can email me directly at vkhotimchenko@gmail.com</p>
@@ -222,7 +224,7 @@
             <a href="https://getbootstrap.com/">bootstrap</a>,
             <a href="https://jquery.com/">jquery</a>,
             <a href="https://webpack.js.org/">webpack</a> and metal
-            <a href="https://wallpaperscraft.com/image/immortal_band_image_scream_faces_12381_1920x1080.jpg" target="_blank">🤘</a>
+            <a href="http://www.trivium.org/sites/g/files/g2000005246/f/201709/header.jpg" target="_blank">🤘</a>
           </div>
         </div>
       </div>
