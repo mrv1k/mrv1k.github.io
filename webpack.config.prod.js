@@ -4,7 +4,9 @@ const webpack = require('webpack');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
-const PostcssAutoprefixer = require('autoprefixer');
+const Autoprefixer = require('autoprefixer');
+const uncss = require('uncss');
+const path = require('path');
 
 module.exports = merge(common, {
   module: {
@@ -14,7 +16,23 @@ module.exports = merge(common, {
         use: ExtractTextPlugin.extract({
           use: [
             'css-loader',
-            { loader: 'postcss-loader', options: { plugins: () => [PostcssAutoprefixer()] } },
+            {
+              loader: 'postcss-loader',
+              options: {
+                plugins() {
+                  return [uncss.postcssPlugin({
+                    html: [path.resolve(__dirname, 'app/index.html')],
+                    ignore: [
+                      '.form-control.is-invalid',
+                      '.form-control.is-invalid ~ .invalid-feedback',
+                      '.form-control.is-invalid:focus',
+                    ],
+                  }),
+                  Autoprefixer()];
+                },
+                sourceMap: true,
+              },
+            },
           ],
           fallback: 'style-loader',
         }),
