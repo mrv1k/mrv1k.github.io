@@ -4,6 +4,7 @@ const webpack = require('webpack');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const PostcssAutoprefixer = require('autoprefixer');
 
 module.exports = merge(common, {
   module: {
@@ -11,7 +12,10 @@ module.exports = merge(common, {
       {
         test: /\.css$/,
         use: ExtractTextPlugin.extract({
-          use: ['css-loader'],
+          use: [
+            'css-loader',
+            { loader: 'postcss-loader', options: { plugins: () => [PostcssAutoprefixer()] } },
+          ],
           fallback: 'style-loader',
         }),
       },
