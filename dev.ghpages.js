@@ -4,9 +4,10 @@ const git = require('git-last-commit');
 const ghpages = require('gh-pages');
 const fs = require('fs');
 
-const myShortHash = '8b5068b';
+const myShortHash = '5479d2a';
 
 git.getLastCommit((err, commit) => {
+  console.log(' LATEST -- CURRENT');
   console.log(`${commit.shortHash} vs ${myShortHash}`);
 
   if (commit.shortHash === myShortHash) {
@@ -17,10 +18,10 @@ git.getLastCommit((err, commit) => {
       } else {
         ghpages.publish('build', {
           branch: 'master', // self named github repos must be hosted from master
-          message: `dev @ ${myShortHash}`,
+          message: `dev at ${myShortHash}`,
           dotfiles: true, // .gitignore
         });
-        console.log('Published');
+        console.log('\\o/ Published \\o/');
       }
     });
   } else {
