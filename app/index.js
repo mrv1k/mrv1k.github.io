@@ -2,7 +2,7 @@ import Typed from 'typed.js/lib/typed.min';
 import SmoothScroll from 'smooth-scroll';
 
 import 'bootstrap/dist/css/bootstrap.css';
-import './styles/main.css';
+import './styles/index.css';
 
 // Typing effect
 const typedOptions = {
