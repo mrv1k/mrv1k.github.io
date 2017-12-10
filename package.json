@@ -4,8 +4,8 @@
   "description": "Portfolio website",
   "main": "app/main.js",
   "scripts": {
-    "start": "webpack-dev-server --open --config webpack.config.common.js --env development",
-    "build": "webpack --config webpack.config.common.js --env production",
+    "start": "webpack-dev-server --open --config webpack.config.js --env development",
+    "build": "webpack --bail --config webpack.config.js --env production",
     "predeploy": "npm run build",
     "deploy": "node dev.ghpages.js"
   },
