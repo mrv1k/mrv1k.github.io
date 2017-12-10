@@ -1,11 +1,24 @@
+const webpack = require('webpack');
+const merge = require('webpack-merge');
 const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
 
-module.exports = {
-  entry: './app/main.js',
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CleanWebpackPlugin = require('clean-webpack-plugin');
+const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const AutoprefixerPlugin = require('autoprefixer');
+const uncssPlugin = require('uncss');
+
+const PATHS = {
+  app: path.join(__dirname, 'app'),
+  build: path.join(__dirname, 'build'),
+};
+
+const commonConfig = {
+  entry: PATHS.app,
   output: {
     filename: 'bundle.js',
-    path: path.resolve(__dirname, 'build'),
+    path: PATHS.build,
   },
   module: {
     rules: [
@@ -34,4 +47,86 @@ module.exports = {
       template: 'app/index.html',
     }),
   ],
+};
+
+
+const prodConfig = {
+  module: {
+    rules: [
+      {
+        test: /\.css$/,
+        use: ExtractTextPlugin.extract({
+          use: [
+            'css-loader',
+            {
+              loader: 'postcss-loader',
+              options: {
+                plugins() {
+                  return [uncssPlugin.postcssPlugin({
+                    html: [path.resolve(__dirname, 'app/index.html')],
+                    ignore: [
+                      '.form-control.is-invalid',
+                      '.form-control.is-invalid ~ .invalid-feedback',
+                      '.form-control.is-invalid:focus',
+                    ],
+                  }),
+                  AutoprefixerPlugin()];
+                },
+                sourceMap: true,
+              },
+            },
+          ],
+          fallback: 'style-loader',
+        }),
+      },
+    ],
+  },
+  devtool: 'source-map',
+  plugins: [
+    new CleanWebpackPlugin(['build']),
+    new webpack.DefinePlugin({
+      'process.env.NODE_ENV': JSON.stringify('production'),
+    }),
+    new UglifyJSPlugin({
+      sourceMap: true,
+    }),
+    new ExtractTextPlugin({
+      allChunks: true,
+      filename: '[name].css',
+      fallback: 'style-loader',
+    }),
+  ],
+  performance: {
+    hints: 'error',
+  },
+};
+
+
+const devConfig = {
+  module: {
+    rules: [
+      {
+        test: /\.css$/,
+        use: [
+          'style-loader',
+          'css-loader',
+        ],
+      },
+    ],
+  },
+  devtool: 'inline-source-map',
+  devServer: {
+    contentBase: './build',
+    stats: 'errors-only',
+    overlay: true,
+  },
+};
+
+
+module.exports = (env) => {
+  if (env === 'production') {
+    return merge(commonConfig, prodConfig);
+  }
+
+  return merge(commonConfig, devConfig);
 };
