@@ -18,34 +18,19 @@ const commonConfig = merge([
       filename: 'bundle.js',
       path: PATHS.build,
     },
-    module: {
-      rules: [
-        {
-          test: /\.(html)$/,
-          use: {
-            loader: 'html-loader',
-          },
-        },
-        {
-          test: /\.(png|svg|jpg|jpeg)$/,
-          use: [
-            {
-              loader: 'file-loader',
-              options: {
-                name: '[name].[ext]',
-                outputPath: 'images/',
-              },
-            },
-          ],
-        },
-      ],
-    },
     plugins: [
       new HtmlWebpackPlugin({
         template: 'app/index.html',
       }),
     ],
   },
+  parts.loadHtml(),
+  parts.loadImages({
+    options: {
+      name: '[name].[ext]',
+      outputPath: 'images/',
+    },
+  }),
 ]);
 
 
@@ -56,6 +41,7 @@ const prodConfig = merge([
       hints: 'error',
     },
   },
+  parts.clean(PATHS.build),
   parts.extractCSS({
     use: [
       'css-loader',
@@ -70,7 +56,6 @@ const prodConfig = merge([
       }),
     ],
   }),
-  parts.clean(PATHS.build),
   parts.uglifyJS({ sourceMap: true }),
 ]);
 

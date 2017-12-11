@@ -1,3 +1,5 @@
+// COMMON variables
+
 // DEV variables
 
 // PROD variables
@@ -8,6 +10,40 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 
 
+// COMMON
+exports.loadImages = ({ include, exclude, options } = {}) => ({
+  module: {
+    rules: [
+      {
+        test: /\.(png|svg|jpg|jpeg)$/,
+        include,
+        exclude,
+        use: {
+          loader: 'file-loader',
+          options,
+        },
+      },
+    ],
+  },
+});
+
+
+exports.loadHtml = ({ options } = {}) => ({
+  module: {
+    rules: [
+      {
+        test: /\.(html)$/,
+        use: {
+          loader: 'html-loader',
+          options,
+        },
+      },
+    ],
+  },
+});
+
+
+// PROD
 exports.clean = path => ({
   plugins: [new CleanWebpackPlugin(path)],
 });
@@ -79,6 +115,3 @@ exports.loadCSS = ({ include, exclude } = {}) => ({
     ],
   },
 });
-
-// PROD
-
