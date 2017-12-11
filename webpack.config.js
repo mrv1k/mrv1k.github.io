@@ -25,12 +25,6 @@ const commonConfig = merge([
     ],
   },
   parts.loadHtml(),
-  parts.loadImages({
-    options: {
-      name: '[name].[ext]',
-      outputPath: 'images/',
-    },
-  }),
 ]);
 
 
@@ -40,6 +34,7 @@ const devConfig = merge([
   },
   parts.devServer(),
   parts.loadCSS(),
+  parts.loadImages(),
 ]);
 
 
@@ -64,6 +59,13 @@ const prodConfig = merge([
         ],
       }),
     ],
+  }),
+  parts.loadImages({
+    options: {
+      limit: 15000,
+      name: '[name].[ext]',
+      outputPath: 'images/',
+    },
   }),
   parts.uglifyJS({ sourceMap: true }),
 ]);

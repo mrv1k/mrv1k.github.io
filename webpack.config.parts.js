@@ -15,11 +15,11 @@ exports.loadImages = ({ include, exclude, options } = {}) => ({
   module: {
     rules: [
       {
-        test: /\.(png|svg|jpg|jpeg)$/,
+        test: /\.(png|jpg|jpeg)$/,
         include,
         exclude,
         use: {
-          loader: 'file-loader',
+          loader: 'url-loader',
           options,
         },
       },
