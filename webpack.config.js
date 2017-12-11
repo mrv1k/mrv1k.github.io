@@ -34,6 +34,15 @@ const commonConfig = merge([
 ]);
 
 
+const devConfig = merge([
+  {
+    devtool: 'inline-source-map',
+  },
+  parts.devServer(),
+  parts.loadCSS(),
+]);
+
+
 const prodConfig = merge([
   {
     devtool: 'source-map',
@@ -57,15 +66,6 @@ const prodConfig = merge([
     ],
   }),
   parts.uglifyJS({ sourceMap: true }),
-]);
-
-
-const devConfig = merge([
-  {
-    devtool: 'inline-source-map',
-  },
-  parts.devServer(),
-  parts.loadCSS(),
 ]);
 
 

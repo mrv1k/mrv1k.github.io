@@ -27,7 +27,6 @@ exports.loadImages = ({ include, exclude, options } = {}) => ({
   },
 });
 
-
 exports.loadHtml = ({ options } = {}) => ({
   module: {
     rules: [
@@ -37,6 +36,28 @@ exports.loadHtml = ({ options } = {}) => ({
           loader: 'html-loader',
           options,
         },
+      },
+    ],
+  },
+});
+
+
+// DEV
+exports.devServer = () => ({
+  devServer: {
+    stats: 'errors-only',
+    overlay: true,
+  },
+});
+
+exports.loadCSS = ({ include, exclude } = {}) => ({
+  module: {
+    rules: [
+      {
+        test: /\.css$/,
+        include,
+        exclude,
+        use: ['style-loader', 'css-loader'],
       },
     ],
   },
@@ -91,27 +112,5 @@ exports.uncss = ({ html, ignore }) => ({
     plugins() {
       return [UncssPlugin.postcssPlugin({ html, ignore })];
     },
-  },
-});
-
-
-// DEV
-exports.devServer = () => ({
-  devServer: {
-    stats: 'errors-only',
-    overlay: true,
-  },
-});
-
-exports.loadCSS = ({ include, exclude } = {}) => ({
-  module: {
-    rules: [
-      {
-        test: /\.css$/,
-        include,
-        exclude,
-        use: ['style-loader', 'css-loader'],
-      },
-    ],
   },
 });
