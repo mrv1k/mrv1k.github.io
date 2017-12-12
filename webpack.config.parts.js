@@ -11,17 +11,28 @@ const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 
 
 // COMMON
-exports.loadImages = ({ include, exclude, options } = {}) => ({
+exports.loadImages = ({ include, exclude } = {}) => ({
   module: {
+    // rules: [
+    //   {
+    //     test: /\.(png|jpg|jpeg)$/,
+    //     include,
+    //     exclude,
+    //     use: {
+    //       loader: 'url-loader',
+    //       options,
+    //     },
+    //   },
+    // ],
     rules: [
       {
-        test: /\.(png|jpg|jpeg)$/,
+        test: /\.(jpe?g|png|gif|svg)$/,
         include,
         exclude,
-        use: {
-          loader: 'url-loader',
-          options,
-        },
+        use: [
+          'file-loader?hash=sha512&digest=hex&name=[hash].[ext]',
+          'image-webpack-loader?bypassOnDebug&optimizationLevel=7&interlaced=false',
+        ],
       },
     ],
   },
