@@ -6,6 +6,7 @@
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const AutoprefixerPlugin = require('autoprefixer');
 const UncssPlugin = require('uncss');
+const CssnanoPlugin = require('cssnano');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 
@@ -111,6 +112,15 @@ exports.uncss = ({ html, ignore }) => ({
   options: {
     plugins() {
       return [UncssPlugin.postcssPlugin({ html, ignore })];
+    },
+  },
+});
+
+exports.minifycss = () => ({
+  loader: 'postcss-loader',
+  options: {
+    plugins() {
+      return [CssnanoPlugin()];
     },
   },
 });

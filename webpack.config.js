@@ -29,9 +29,6 @@ const commonConfig = merge([
 
 
 const devConfig = merge([
-  {
-    devtool: 'inline-source-map',
-  },
   parts.devServer(),
   parts.loadCSS(),
   parts.loadImages(),
@@ -40,7 +37,7 @@ const devConfig = merge([
 
 const prodConfig = merge([
   {
-    devtool: 'source-map',
+    // devtool: 'source-map',
     performance: {
       hints: 'error',
     },
@@ -58,6 +55,7 @@ const prodConfig = merge([
           '.form-control.is-invalid:focus',
         ],
       }),
+      parts.minifycss(),
     ],
   }),
   parts.optimizeImages(),
