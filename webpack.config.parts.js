@@ -14,6 +14,21 @@ const GitRevisionPlugin = require('git-revision-webpack-plugin');
 
 
 // COMMON
+exports.loadHtml = ({ options } = {}) => ({
+  module: {
+    rules: [
+      {
+        test: /\.(html)$/,
+        use: {
+          loader: 'html-loader',
+          options,
+        },
+      },
+    ],
+  },
+});
+
+// COMMON (different configs)
 exports.loadImages = ({ include, exclude, options } = {}) => ({
   module: {
     rules: [
@@ -23,20 +38,6 @@ exports.loadImages = ({ include, exclude, options } = {}) => ({
         exclude,
         use: {
           loader: 'url-loader',
-          options,
-        },
-      },
-    ],
-  },
-});
-
-exports.loadHtml = ({ options } = {}) => ({
-  module: {
-    rules: [
-      {
-        test: /\.(html)$/,
-        use: {
-          loader: 'html-loader',
           options,
         },
       },
@@ -72,37 +73,19 @@ exports.clean = path => ({
   plugins: [new CleanWebpackPlugin(path)],
 });
 
-exports.uglifyJS = ({ sourceMap } = {}) => ({
-  plugins: [new UglifyJSPlugin({ sourceMap })],
+exports.optimizeImages = ({ include, exclude } = {}) => ({
+  module: {
+    rules: [
+      {
+        test: /\.(jpe?g|png|gif)$/,
+        include,
+        exclude,
+        use: 'image-webpack-loader',
+        enforce: 'pre',
+      },
+    ],
+  },
 });
-
-exports.generateSourceMaps = options => ({
-  plugins: [new webpack.SourceMapDevToolPlugin(options)],
-});
-
-exports.extractCSS = ({ include, exclude, use }) => {
-  const extractPlugin = new ExtractTextPlugin({
-    allChunks: true,
-    filename: '[name].css',
-  });
-
-  return {
-    module: {
-      rules: [
-        {
-          test: /\.css$/,
-          include,
-          exclude,
-          use: extractPlugin.extract({
-            use,
-            fallback: 'style-loader',
-          }),
-        },
-      ],
-    },
-    plugins: [extractPlugin],
-  };
-};
 
 exports.autoprefix = () => ({
   loader: 'postcss-loader',
@@ -131,6 +114,34 @@ exports.minifycss = () => ({
   },
 });
 
+exports.extractCSS = ({ include, exclude, use }) => {
+  const extractPlugin = new ExtractTextPlugin({
+    allChunks: true,
+    filename: '[name].css',
+  });
+
+  return {
+    module: {
+      rules: [
+        {
+          test: /\.css$/,
+          include,
+          exclude,
+          use: extractPlugin.extract({
+            use,
+            fallback: 'style-loader',
+          }),
+        },
+      ],
+    },
+    plugins: [extractPlugin],
+  };
+};
+
+exports.generateSourceMaps = options => ({
+  plugins: [new webpack.SourceMapDevToolPlugin(options)],
+});
+
 exports.loadJS = ({ include, exclude } = {}) => ({
   module: {
     rules: [
@@ -144,18 +155,8 @@ exports.loadJS = ({ include, exclude } = {}) => ({
   },
 });
 
-exports.optimizeImages = ({ include, exclude } = {}) => ({
-  module: {
-    rules: [
-      {
-        test: /\.(jpe?g|png|gif)$/,
-        include,
-        exclude,
-        use: 'image-webpack-loader',
-        enforce: 'pre',
-      },
-    ],
-  },
+exports.uglifyJS = ({ sourceMap } = {}) => ({
+  plugins: [new UglifyJSPlugin({ sourceMap })],
 });
 
 exports.attachRevision = () => ({

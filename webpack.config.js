@@ -39,22 +39,11 @@ const prodConfig = merge([
   {
     performance: {
       hints: 'error',
+      maxEntrypointSize: 83 * 1024,
+      maxAssetSize: 105 * 1024,
     },
   },
   parts.clean(PATHS.build),
-  parts.extractCSS({
-    use: [
-      'css-loader',
-      parts.autoprefix(),
-      parts.uncss({
-        html: [path.join(PATHS.app, 'index.html')],
-        ignore: [
-          /\.form-control\.is-invalid/g,
-        ],
-      }),
-      parts.minifycss(),
-    ],
-  }),
   parts.optimizeImages(),
   parts.loadImages({
     options: {
@@ -63,11 +52,22 @@ const prodConfig = merge([
       outputPath: 'images/',
     },
   }),
-  parts.loadJS({ include: PATHS.app }),
+  parts.extractCSS({
+    use: [
+      'css-loader',
+      parts.autoprefix(),
+      parts.uncss({
+        html: [path.join(PATHS.app, 'index.html')],
+        ignore: [/\.form-control\.is-invalid/g],
+      }),
+      parts.minifycss(),
+    ],
+  }),
   parts.generateSourceMaps({
     test: /bundle\.js$/,
     filename: 'bundle.js.map',
   }),
+  parts.loadJS({ include: PATHS.app }),
   parts.uglifyJS({ sourceMap: true }),
   parts.attachRevision(),
 ]);
