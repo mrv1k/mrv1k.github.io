@@ -49,9 +49,7 @@ const prodConfig = merge([
       parts.uncss({
         html: [path.join(PATHS.app, 'index.html')],
         ignore: [
-          '.form-control.is-invalid',
-          '.form-control.is-invalid ~ .invalid-feedback',
-          '.form-control.is-invalid:focus',
+          /\.form-control\.is-invalid/g,
         ],
       }),
       parts.minifycss(),
