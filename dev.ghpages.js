@@ -5,7 +5,7 @@ const fs = require('fs');
 const ghpages = require('gh-pages');
 
 const shortHash = new GitRevisionPlugin().version();
-const myShortHash = '5479d2a';
+const myShortHash = '51a6bab';
 
 
 function deploy() {

@@ -8,15 +8,15 @@
     "build": "webpack --bail --env production",
     "predeploy": "npm run build",
     "deploy": "node dev.ghpages.js",
-    "pretestbuild": "npm run build",
-    "testbuild": "http-server ./build -o -c-1"
+    "prehttp": "npm run build",
+    "http": "http-server ./build -o -c-1"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/mrv1k/portfolio.git"
   },
   "keywords": [
-    "portfolio"
+    "portfolio", "gh-pages"
   ],
   "author": "Viktor Khotimchenko",
   "license": "ISC",
