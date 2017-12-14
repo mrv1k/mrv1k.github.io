@@ -37,7 +37,6 @@ const devConfig = merge([
 
 const prodConfig = merge([
   {
-    // devtool: 'source-map',
     performance: {
       hints: 'error',
     },
@@ -67,6 +66,10 @@ const prodConfig = merge([
     },
   }),
   parts.loadJS({ include: PATHS.app }),
+  parts.generateSourceMaps({
+    test: /bundle\.js$/,
+    filename: 'bundle.js.map',
+  }),
   parts.uglifyJS({ sourceMap: true }),
 ]);
 

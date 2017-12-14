@@ -9,6 +9,7 @@ const UncssPlugin = require('uncss');
 const CssnanoPlugin = require('cssnano');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
+const webpack = require('webpack');
 
 
 // COMMON
@@ -72,6 +73,10 @@ exports.clean = path => ({
 
 exports.uglifyJS = ({ sourceMap } = {}) => ({
   plugins: [new UglifyJSPlugin({ sourceMap })],
+});
+
+exports.generateSourceMaps = options => ({
+  plugins: [new webpack.SourceMapDevToolPlugin(options)],
 });
 
 exports.extractCSS = ({ include, exclude, use }) => {
