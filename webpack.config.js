@@ -60,9 +60,10 @@ const prodConfig = merge([
       }),
     ],
   }),
+  parts.optimizeImages(),
   parts.loadImages({
     options: {
-      limit: 15000,
+      limit: 10 * 1024,
       name: '[name].[ext]',
       outputPath: 'images/',
     },
