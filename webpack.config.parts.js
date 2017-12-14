@@ -87,6 +87,30 @@ exports.optimizeImages = ({ include, exclude } = {}) => ({
   },
 });
 
+exports.extractCSS = ({ include, exclude, use }) => {
+  const extractPlugin = new ExtractTextPlugin({
+    allChunks: true,
+    filename: '[name].css',
+  });
+
+  return {
+    module: {
+      rules: [
+        {
+          test: /\.css$/,
+          include,
+          exclude,
+          use: extractPlugin.extract({
+            use,
+            fallback: 'style-loader',
+          }),
+        },
+      ],
+    },
+    plugins: [extractPlugin],
+  };
+};
+
 exports.autoprefix = () => ({
   loader: 'postcss-loader',
   options: {
@@ -113,30 +137,6 @@ exports.minifycss = () => ({
     },
   },
 });
-
-exports.extractCSS = ({ include, exclude, use }) => {
-  const extractPlugin = new ExtractTextPlugin({
-    allChunks: true,
-    filename: '[name].css',
-  });
-
-  return {
-    module: {
-      rules: [
-        {
-          test: /\.css$/,
-          include,
-          exclude,
-          use: extractPlugin.extract({
-            use,
-            fallback: 'style-loader',
-          }),
-        },
-      ],
-    },
-    plugins: [extractPlugin],
-  };
-};
 
 exports.generateSourceMaps = options => ({
   plugins: [new webpack.SourceMapDevToolPlugin(options)],
