@@ -67,6 +67,7 @@ const prodConfig = merge([
       outputPath: 'images/',
     },
   }),
+  parts.loadJS({ include: PATHS.app }),
   parts.uglifyJS({ sourceMap: true }),
 ]);
 
