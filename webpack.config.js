@@ -71,6 +71,7 @@ const prodConfig = merge([
     filename: 'bundle.js.map',
   }),
   parts.uglifyJS({ sourceMap: true }),
+  parts.attachRevision(),
 ]);
 
 

@@ -3,13 +3,14 @@
 // DEV variables
 
 // PROD variables
+const webpack = require('webpack');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const AutoprefixerPlugin = require('autoprefixer');
 const UncssPlugin = require('uncss');
 const CssnanoPlugin = require('cssnano');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
-const webpack = require('webpack');
+const GitRevisionPlugin = require('git-revision-webpack-plugin');
 
 
 // COMMON
@@ -155,4 +156,12 @@ exports.optimizeImages = ({ include, exclude } = {}) => ({
       },
     ],
   },
+});
+
+exports.attachRevision = () => ({
+  plugins: [
+    new webpack.BannerPlugin({
+      banner: new GitRevisionPlugin().version(),
+    }),
+  ],
 });
