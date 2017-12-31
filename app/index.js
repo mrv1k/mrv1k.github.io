@@ -11,11 +11,11 @@ const typedOptions = {
   typeSpeed: 60,
   backSpeed: 50,
   cursorChar: '',
-  onComplete: () => {
-    const landBtnCss = document.querySelector('.v-landing-btn').classList;
-    landBtnCss.add('v-opacity-anim-1s');
-    landBtnCss.remove('v-opacity-0');
-  },
+  // onComplete: () => {
+  //   const landBtnCss = document.querySelector('.v-landing-btn').classList;
+  //   landBtnCss.add('v-opacity-anim-1s');
+  //   landBtnCss.remove('v-opacity-0');
+  // },
 };
 
 /* eslint-disable no-unused-vars */
