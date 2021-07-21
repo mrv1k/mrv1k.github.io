@@ -6,7 +6,7 @@
  */
 
 import * as React from "react";
-import { useStaticQuery, graphql } from "gatsby";
+import { useStaticQuery, graphql, Link } from "gatsby";
 import { StaticImage } from "gatsby-plugin-image";
 
 const Bio = () => {
@@ -38,8 +38,9 @@ const Bio = () => {
         quality={95}
         alt={author?.name}
       />
-      <p style={{ maxWidth: "310px" }}>
-        Blog by {author?.name} <br />A journey to teach myself CS.
+      <p style={{ maxWidth: "420px" }}>
+        Blog by {author?.name}. <Link to="/portfolio">Portfolio</Link> <br />A
+        journey to teach myself CS.
       </p>
     </div>
   );
