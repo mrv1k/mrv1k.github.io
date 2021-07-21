@@ -1,0 +1,11 @@
+.sections section:nth-of-type(even) {
+  background-color: rgba(209, 213, 219, 1);
+}
+
+.content {
+  margin: var(--spacing-0) auto;
+  max-width: var(--maxWidth-wrapper);
+  border-left: 1px dashed gray;
+  border-right: 1px dashed gray;
+  /* padding: var(--spacing-10) var(--spacing-5); */
+}

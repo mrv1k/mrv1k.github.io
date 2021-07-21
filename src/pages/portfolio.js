@@ -1,21 +1,31 @@
 import * as React from "react";
-import Layout from "../components/layout";
 import Seo from "../components/seo";
+import * as styles from "./portfolio.module.css";
 
-const PortfolioPage = ({ location }) => {
-  const title = "Portfolio | Viktor Khotimchenko";
+const PortfolioPage = () => {
+  const title = "Viktor Khotimchenko Portfolio";
 
   return (
-    <Layout location={location} title={title}>
+    <div>
       <Seo title={title} />
-      <div>
-        <section className="about">about</section>
-        <section className="skills">skills</section>
-        <section className="projects">projects</section>
-        <section className="experience">experience</section>
-        <section className="contact">contact</section>
-      </div>
-    </Layout>
+      <main className={styles.sections}>
+        <section className="about">
+          <div className={styles.content}>about</div>
+        </section>
+        <section className="skills">
+          <div className={styles.content}>skills</div>
+        </section>
+        <section className="projects">
+          <div className={styles.content}>projects</div>
+        </section>
+        <section className="experience">
+          <div className={styles.content}>experience</div>
+        </section>
+        <section className="contact">
+          <div className={styles.content}>contact</div>
+        </section>
+      </main>
+    </div>
   );
 };
 
