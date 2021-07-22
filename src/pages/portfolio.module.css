@@ -1,34 +1,46 @@
-.wrapper {
-  padding: var(--spacing-10) var(--spacing-5);
-}
-.sections {
+main {
   display: grid;
   grid-template-columns: 1fr var(--maxWidth-wrapper) 1fr;
-  /* photo size + (content padding * 2) */
-  grid-template-rows: minmax(21rem, auto);
-  grid-template-rows: repeat(3, auto);
+  align-items: center;
 }
 
-.sections section {
-  /* grid-column-start: 1;
-  grid-column-end: 3; */
-  /* grid-column: span 3; */
-}
-
-.sections section:nth-of-type(even) {
+main section:nth-of-type(even) {
   background-color: rgba(209, 213, 219, 1);
 }
 
-.content {
+section {
+  grid-column: 2;
   margin: var(--spacing-0) auto;
-  border-left: 1px dashed gray;
-  border-right: 1px dashed gray;
   padding: var(--spacing-10) var(--spacing-5);
 }
 
+main .about {
+  grid-column: 2;
+}
+
 .image-of-me {
-  max-height: 16rem;
+  height: 256px;
   border-radius: 4px;
-  justify-self: center;
-  margin: auto var(--spacing-0);
+  margin: var(--spacing-10) var(--spacing-5);
+  justify-self: start;
+  grid-column: 3;
+}
+
+/* When image and image can't fit side-by-side */
+/* 2.5rem padding, 42 rem width, 256px image (16rem) */
+@media (max-device-width: 968px) {
+  main {
+    grid-template-columns: auto;
+  }
+
+  main .about {
+    grid-column: span 3;
+  }
+
+  .image-of-me {
+    grid-column: 2;
+    grid-row: 1;
+    justify-self: center;
+    margin: var(--spacing-2) var(--spacing-5);
+  }
 }

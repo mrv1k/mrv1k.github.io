@@ -9,27 +9,29 @@ const PortfolioPage = () => {
   const title = "Viktor Khotimchenko Portfolio";
 
   return (
-    <div class={styles.wrapper}>
+    <main>
       <Seo title={title} />
-      <main className={styles.sections}>
-        <img className={styles.imageOfMe} src={mrv1k_pic} />
-        <section className="about">
-          <div className={styles.content}>1 {cheese_lorem}</div>
-        </section>
-        <section className="skills">
-          <div className={styles.content}>2 {cheese_lorem}</div>
-        </section>
-        <section className="projects">
-          <div className={styles.content}>3 {cheese_lorem}</div>
-        </section>
-        <section className="experience">
-          <div className={styles.content}>4 {cheese_lorem}</div>
-        </section>
-        <section className="contact">
-          <div className={styles.content}>5 {cheese_lorem}</div>
-        </section>
-      </main>
-    </div>
+      <section className={styles.about}>
+        <div className={styles.content}>1 {cheese_lorem}</div>
+      </section>
+      <img
+        className={styles.imageOfMe}
+        src={mrv1k_pic}
+        alt="unoptimized img of me"
+      />
+      <section className="skills">
+        <div className={styles.content}>2 {cheese_lorem}</div>
+      </section>
+      <section className="projects">
+        <div className={styles.content}>3 {cheese_lorem}</div>
+      </section>
+      <section className="experience">
+        <div className={styles.content}>4 {cheese_lorem}</div>
+      </section>
+      <section className="contact">
+        <div className={styles.content}>5 {cheese_lorem}</div>
+      </section>
+    </main>
   );
 };
 
