@@ -33,14 +33,14 @@ const Bio = () => {
         layout="fixed"
         formats={["AUTO", "WEBP", "AVIF"]}
         src="../images/mrv1k-pic.jpg"
-        width={52}
-        height={52}
+        width={56}
+        height={56}
         quality={95}
         alt={author?.name}
       />
       <p style={{ maxWidth: "420px" }}>
-        Blog by {author?.name}. <Link to="/portfolio">Portfolio</Link> <br />A
-        journey to teach myself CS.
+        Blog by <Link to="/portfolio">{author?.name}</Link>. <br />A journey to
+        teach myself CS.
       </p>
     </div>
   );

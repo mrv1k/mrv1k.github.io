@@ -48,7 +48,7 @@
     "url": "git+https://github.com/mrv1k/mrv1k/mrv1k.github.iog.git"
   },
   "scripts": {
-    "dev": "gatsby develop",
+    "dev": "gatsby develop -H 0.0.0.0",
     "build": "gatsby build",
     "develop": "gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
