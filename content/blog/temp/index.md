@@ -113,6 +113,7 @@ class MaxHeapInline {
   }
   buildHeapDown(array) {
     this.heap = array.slice();
+    // highlight-next-line
     for (let i = Math.floor(this.heap.length / 2); i >= 0; i--) {
       this._heapifyDown(i);
     }
