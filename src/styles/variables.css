@@ -27,13 +27,7 @@
   --spacing-20: 5rem;
   --spacing-24: 6rem;
   --spacing-32: 8rem;
-  --fontFamily-sans: Montserrat, system-ui, -apple-system, BlinkMacSystemFont,
-    "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
-    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --fontFamily-serif: "Source Sans Pro", "Merriweather", "Georgia", Cambria,
-    "Times New Roman", Times, serif;
-  --font-body: var(--fontFamily-serif);
-  --font-heading: var(--fontFamily-sans);
+
   --fontWeight-normal: 400;
   --fontWeight-medium: 500;
   --fontWeight-semibold: 600;
@@ -60,4 +54,24 @@
   --color-heading: #1a202c;
   --color-heading-black: black;
   --color-accent: #d1dce5;
+
+  /**
+  Variable fonts:
+  - Montserrat
+  - Roboto
+  + JetBrains Mono
+
+  */
+  /* --fontFamily-sans:  */
+  --font-heading: Montserrat, system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+
+  /* --fontFamily-serif:  */
+  /* Roboto is sans-serif  */
+  --font-body: "Roboto", "Georgia", Cambria, "Times New Roman", Times, serif;
+
+  /* TODO: jet brains is variable font  */
+  --fontFamily-syntax: "JetBrains Mono", Consolas, Monaco, "Andale Mono",
+    "Ubuntu Mono", monospace;
 }

@@ -1,3 +1,5 @@
+@import "./variables.css";
+
 /* For line highlights similar to PrismJS */
 .gatsby-highlight-code-line {
   background-color: #feb;
@@ -37,10 +39,6 @@
   min-width: 100%; /* 2 */
 }
 
-/**
- * If you already use line highlighting
- */
-
 /* Adjust the position of the line numbers */
 .gatsby-highlight pre[class*="language-"].line-numbers {
   padding-left: 2.8em;
@@ -48,5 +46,5 @@
 
 .gatsby-highlight code[class*="language-"],
 .gatsby-highlight pre[class*="language-"] {
-  font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
+  font-family: var(--fontFamily-syntax);
 }

@@ -10,9 +10,7 @@ const PortfolioPage = () => {
     <main className="portfolio">
       <Seo title={title} />
       <section className="about">
-        <span className="title">
-          <p>`{">"} whoami`</p>
-        </span>
+        <h1 className="title">{">"} whoami</h1>
         <p>I love programming.</p>
         <p>
           After I graduated Fanshawe college in 2015 I struggled to find a

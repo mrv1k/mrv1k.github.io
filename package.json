@@ -8,6 +8,9 @@
     "url": "https://github.com/mrv1k/mrv1k.github.io/issues"
   },
   "dependencies": {
+    "@fontsource/jetbrains-mono": "^4.5.0",
+    "@fontsource/montserrat": "^4.5.0",
+    "@fontsource/roboto": "^4.5.0",
     "gatsby": "^3.9.1",
     "gatsby-plugin-feed": "^3.9.0",
     "gatsby-plugin-gatsby-cloud": "^2.9.1",
@@ -29,9 +32,7 @@
     "prismjs": "^1.24.1",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
-    "react-helmet": "^6.1.0",
-    "typeface-merriweather": "0.0.72",
-    "typeface-montserrat": "0.0.75"
+    "react-helmet": "^6.1.0"
   },
   "devDependencies": {
     "prettier": "2.3.2"
