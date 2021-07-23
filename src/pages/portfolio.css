@@ -1,20 +1,19 @@
-main {
+.portfolio {
   display: grid;
   grid-template-columns: 1fr var(--maxWidth-wrapper) 1fr;
   align-items: center;
 }
 
-main section:nth-of-type(even) {
+.portfolio section:nth-of-type(even) {
   background-color: rgba(209, 213, 219, 1);
 }
 
 section {
   grid-column: 2;
-  margin: var(--spacing-0) auto;
   padding: var(--spacing-10) var(--spacing-5);
 }
 
-main .about {
+.portfolio .about {
   grid-column: 2;
 }
 
@@ -29,11 +28,11 @@ main .about {
 /* When image and image can't fit side-by-side */
 /* 2.5rem padding, 42 rem width, 256px image (16rem) */
 @media (max-device-width: 968px) {
-  main {
+  .portfolio {
     grid-template-columns: auto;
   }
 
-  main .about {
+  .portfolio .about {
     grid-column: span 3;
   }
 
