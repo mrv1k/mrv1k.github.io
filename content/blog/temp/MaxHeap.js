@@ -1,46 +1,6 @@
----
-title: temp!
----
-
-> asd
->
-> -- very deep quote
-
-```javascript{numberLines: 42}
-const meaningOfLife = 42;
-```
-
-```bash
-export PATH="$PATH:$HOME/.composer/vendor/bin"
-
-if command -v pyenv 1>/dev/null 2>&1; then
-  eval "$(pyenv init -)"
-fi
-```
-
-currently diff doesn't highlight as intended
-
-```diff-text
-diff
-+ hey // highlight-line
-- ho // highlight-line
-```
-
-## We
-
-### Test
-
-[random](https://www.random.org/)
-
-### Embed
-
-`embed:MaxHeap.js`
-
-### Inline
-
-```js
 console.clear();
-class MaxHeapInline {
+
+class MaxHeapFromFile {
   constructor() {
     // highlight-line
     this.heap = [];
@@ -121,4 +81,4 @@ class MaxHeapInline {
 }
 
 const heap = new MaxHeap();
-```
+// hide-next-line
