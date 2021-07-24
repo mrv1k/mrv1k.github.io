@@ -1,26 +1,27 @@
 @import "./variables.css";
-
-/* For line highlights similar to PrismJS */
-.gatsby-highlight-code-line {
-  background-color: #feb;
-  display: block;
-  margin-right: -1em;
-  margin-left: -1em;
-  padding-right: 1em;
-  padding-left: 0.75em;
-  border-left: 0.25em solid #f99;
-}
-
 /**
  * Add back the container background-color, border-radius, padding, margin
  * and overflow that we removed from <pre>.
  */
 .gatsby-highlight {
   background-color: #fdf6e3;
-  border-radius: 0.3em;
+  border-radius: 0.3rem;
   margin: 0.5em 0;
-  padding: 1em;
+  padding: 1rem;
+  /* custom left padding for line number left/right balance */
+  padding-left: 0.8rem;
   overflow: auto hidden;
+}
+
+/* For line highlights similar to PrismJS */
+.gatsby-highlight-code-line {
+  background-color: #feb;
+  display: block;
+  margin-right: -1rem;
+  margin-left: -1rem;
+  padding-right: 1rem;
+  padding-left: 0.75rem;
+  border-left: 0.25em solid #f99;
 }
 
 /**
@@ -41,10 +42,12 @@
 
 /* Adjust the position of the line numbers */
 .gatsby-highlight pre[class*="language-"].line-numbers {
-  padding-left: 2.8em;
+  padding-left: 2.8rem;
 }
 
 .gatsby-highlight code[class*="language-"],
 .gatsby-highlight pre[class*="language-"] {
   font-family: var(--fontFamily-syntax);
+  font-size: var(--fontSize-1);
+  line-height: normal;
 }

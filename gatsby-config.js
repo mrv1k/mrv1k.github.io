@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `Pain Driven Development`,
+    title: `Surrender to the Grind`,
     author: {
       name: `Viktor Khotimchenko`,
       summary: `Typescript &amp; Javascript developer`,
