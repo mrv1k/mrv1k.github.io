@@ -27,7 +27,7 @@ const Bio = () => {
   const author = data.site.siteMetadata?.author;
 
   return (
-    <div className="bio">
+    <aside className="bio">
       <StaticImage
         className="bio-avatar"
         layout="fixed"
@@ -42,7 +42,7 @@ const Bio = () => {
         Blog by <Link to="/portfolio">{author?.name}</Link>. <br />A journey to
         teach myself CS.
       </p>
-    </div>
+    </aside>
   );
 };
 

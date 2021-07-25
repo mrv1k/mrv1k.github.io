@@ -22,6 +22,7 @@ body {
 }
 
 footer {
+  font-size: var(--fontSize-1);
   padding: var(--spacing-6) var(--spacing-0);
 }
 
@@ -227,6 +228,7 @@ a:focus {
 .bio {
   display: flex;
   margin-bottom: var(--spacing-16);
+  font-size: var(--fontSize-1);
 }
 
 .bio p {
