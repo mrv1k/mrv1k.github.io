@@ -1,4 +1,7 @@
 module.exports = {
+  flags: {
+    DEV_WEBPACK_CACHE: true,
+  },
   siteMetadata: {
     title: `Surrender to the Grind`,
     author: {

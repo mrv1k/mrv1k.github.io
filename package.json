@@ -1,7 +1,7 @@
 {
   "name": "mrv1k-github-io",
   "private": true,
-  "description": "A portfolio website",
+  "description": "A blog plus portfolio website",
   "version": "0.1.0",
   "author": "Viktor Khotimchenko <viktorkhotimchenko@gmail.com>",
   "bugs": {
@@ -49,6 +49,11 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/mrv1k/mrv1k/mrv1k.github.iog.git"
+  },
+  "engines": {
+    "node": ">=14",
+    "npm": "please-use-yarn",
+    "yarn": ">= 1.22.10"
   },
   "scripts": {
     "dev": "gatsby develop -H 0.0.0.0",
