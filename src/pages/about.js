@@ -3,12 +3,12 @@ import * as React from "react";
 import Layout from "../components/layout";
 import Seo from "../components/seo";
 
-const PortfolioPage = () => {
+const AboutPage = () => {
   const title = "About";
 
   return (
     <Layout title={title}>
-      <div className="portfolio">
+      <div className="about-page">
         <Seo title={`${title} Viktor Khotimchenko`} />
         <section className="about">
           <p>I love programming.</p>
@@ -64,4 +64,4 @@ const PortfolioPage = () => {
   );
 };
 
-export default PortfolioPage;
+export default AboutPage;
