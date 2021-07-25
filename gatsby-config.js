@@ -1,9 +1,11 @@
+const title = `Surrender to the Grind`;
+
 module.exports = {
   flags: {
     DEV_WEBPACK_CACHE: true,
   },
   siteMetadata: {
-    title: `Surrender to the Grind`,
+    title,
     author: {
       name: `Viktor Khotimchenko`,
       summary: `Typescript &amp; Javascript developer`,
@@ -129,13 +131,18 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Gatsby Starter Blog`,
-        short_name: `GatsbyJS`,
+        name: title,
+        short_name: `SttG`,
         start_url: `/`,
         background_color: `#ffffff`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/mrv1k-icon.png`, // This path is relative to the root of the site.
+
+        // This path is relative to the root of the site.
+        icon:
+          process.env.NODE_ENV === "development"
+            ? `src/images/favicon-dev.png`
+            : `src/images/favicon.png`,
       },
     },
     `gatsby-plugin-react-helmet`,
