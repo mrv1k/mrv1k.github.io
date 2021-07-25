@@ -208,7 +208,7 @@ a:focus {
 .header-link-home {
   font-weight: var(--fontWeight-bold);
   font-family: var(--font-heading);
-  font-size: var(--fontSize-2);
+  font-size: var(--fontSize-4);
   color: var(--color-heading);
   letter-spacing: 0;
   line-height: normal;
@@ -271,6 +271,10 @@ a:focus {
 .blog-post-nav ul {
   margin: var(--spacing-0);
 }
+
+/* .portfolio section:nth-of-type(even) {
+  background-color: rgba(209, 213, 219, 1);
+} */
 
 /* Media queries */
 

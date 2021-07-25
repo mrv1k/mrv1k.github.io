@@ -10,7 +10,10 @@ const Layout = ({ location, title, children, showFooter = false }) => {
 
   if (isRootPath) {
     header = (
-      <h1 className="header-link-home">
+      <h1
+        style={{ fontWeight: "var(--fontWeight-black)" }}
+        className="header-link-home"
+      >
         <Link to="/">{title}</Link>
       </h1>
     );
