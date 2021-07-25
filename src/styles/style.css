@@ -239,6 +239,9 @@ a:focus {
   margin-right: var(--spacing-4);
   margin-bottom: var(--spacing-0);
   min-width: 50px;
+}
+
+.avatar-image {
   border-radius: 100%;
 }
 

@@ -32,13 +32,15 @@ const Bio = () => {
         className="bio-avatar"
         layout="fixed"
         formats={["AUTO", "WEBP", "AVIF"]}
-        src="../images/mrv1k-pic.jpg"
+        src="../images/profile-small.jpg"
+        imgClassName="avatar-image"
         width={56}
         height={56}
         quality={95}
         alt={author?.name}
       />
-      <p style={{ maxWidth: "420px" }}>
+
+      <p style={{ maxWidth: "399px" }}>
         Blog by <Link to="/portfolio">{author?.name}</Link>. <br />A journey to
         teach myself CS.
       </p>
