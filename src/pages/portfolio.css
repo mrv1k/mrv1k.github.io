@@ -8,9 +8,9 @@
   background-color: rgba(209, 213, 219, 1);
 }
 
-section {
+.portfolio section {
   grid-column: 2;
-  padding: var(--spacing-10) var(--spacing-5);
+  padding: var(--spacing-5) var(--spacing-5);
 }
 
 .portfolio .about {
@@ -18,10 +18,10 @@ section {
 }
 
 .image-of-me {
-  height: 256px;
   border-radius: 4px;
-  margin: var(--spacing-10) var(--spacing-5);
+  margin-left: var(--spacing-5);
   justify-self: start;
+  align-self: center;
   grid-column: 3;
 }
 
@@ -32,7 +32,7 @@ section {
     grid-template-columns: auto;
   }
 
-  .portfolio .about {
+  .portfolio section {
     grid-column: span 3;
   }
 
@@ -41,5 +41,9 @@ section {
     grid-row: 1;
     justify-self: center;
     margin: var(--spacing-2) var(--spacing-5);
+  }
+
+  h2 {
+    margin-top: 0;
   }
 }

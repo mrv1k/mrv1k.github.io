@@ -1,6 +1,6 @@
+import { StaticImage } from "gatsby-plugin-image";
 import * as React from "react";
 import Seo from "../components/seo";
-import mrv1k_pic from "../images/mrv1k-pic-large.jpg";
 import "./portfolio.css";
 
 const PortfolioPage = () => {
@@ -37,10 +37,15 @@ const PortfolioPage = () => {
           craft as an engineer.
         </p>
       </section>
-      <img
+      <StaticImage
         className="image-of-me"
-        src={mrv1k_pic}
-        alt="unoptimized img of me"
+        layout="fixed"
+        formats={["AUTO", "WEBP", "AVIF"]}
+        src="../images/profile-big.jpg"
+        width={256}
+        height={256}
+        quality={90}
+        alt="Viktor Khotimchenko profile picture"
       />
       <section className="skills">
         <div>2</div>
