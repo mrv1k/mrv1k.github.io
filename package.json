@@ -56,7 +56,8 @@
     "yarn": ">= 1.22.10"
   },
   "scripts": {
-    "dev": "gatsby develop -H 0.0.0.0",
+    "dev": "gatsby develop",
+    "devremote": "gatsby develop -H 0.0.0.0",
     "build": "gatsby build",
     "develop": "gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
