@@ -8,9 +8,9 @@ module.exports = {
     title,
     author: {
       name: `Viktor Khotimchenko`,
-      summary: `Typescript &amp; Javascript developer`,
+      summary: `Typescript and Javascript developer`,
     },
-    description: `A blog demonstrating what you can but shouldn't do.`,
+    description: `Personal blog and website. Blog is about working long, hard and hopefully smart. Website is about me.`,
     siteUrl: `https://mrv1k.me`,
     social: {
       twitter: `mrv1k_`,
@@ -132,7 +132,7 @@ module.exports = {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: title,
-        short_name: `SttG`,
+        short_name: `STTG`,
         start_url: `/`,
         background_color: `#ffffff`,
         theme_color: `#663399`,
