@@ -32,6 +32,12 @@ module.exports = {
       options: {
         plugins: [
           {
+            resolve: "gatsby-remark-external-links",
+            options: {
+              target: "_blank",
+            },
+          },
+          {
             resolve: `gatsby-remark-images`,
             options: {
               maxWidth: 630,
@@ -43,7 +49,8 @@ module.exports = {
               wrapperStyle: `margin-bottom: 1.0725rem`,
             },
           },
-          "gatsby-remark-embed-snippet", // must be added before prismjs plugin
+          `gatsby-remark-autolink-headers`, // must be come before prismjs plugin
+          `gatsby-remark-embed-snippet`, // must be come before prismjs plugin
           {
             resolve: `gatsby-remark-prismjs`,
             options: {
@@ -129,7 +136,7 @@ module.exports = {
       },
     },
     `gatsby-plugin-react-helmet`,
-    `gatsby-plugin-gatsby-cloud`,
+    // `gatsby-plugin-gatsby-cloud`,
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
