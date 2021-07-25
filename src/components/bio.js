@@ -41,8 +41,7 @@ const Bio = () => {
       />
 
       <p style={{ maxWidth: "399px" }}>
-        Blog by <Link to="/portfolio">{author?.name}</Link>. <br />A journey to
-        teach myself CS.
+        Blog by {author?.name} <br />A journey to teach myself CS.
       </p>
     </aside>
   );

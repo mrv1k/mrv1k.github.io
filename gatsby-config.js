@@ -10,7 +10,7 @@ module.exports = {
       name: `Viktor Khotimchenko`,
       summary: `Typescript &amp; Javascript developer`,
     },
-    description: `A blog demonstrating what you can but probably shouldn't do.`,
+    description: `A blog demonstrating what you can but shouldn't do.`,
     siteUrl: `https://mrv1k.me`,
     social: {
       twitter: `mrv1k_`,
