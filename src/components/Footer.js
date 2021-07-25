@@ -5,7 +5,7 @@ const Footer = () => (
     <a
       href="https://github.com/mrv1k"
       target="_blank"
-      rel="noopener noreferrer"
+      rel="nofollow noopener noreferrer"
     >
       GitHub
     </a>
@@ -13,7 +13,7 @@ const Footer = () => (
     <a
       href="https://www.linkedin.com/in/vkhotimchenko/"
       target="_blank"
-      rel="noopener noreferrer"
+      rel="nofollow noopener noreferrer"
     >
       LinkedIn
     </a>
