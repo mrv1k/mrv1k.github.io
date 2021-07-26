@@ -38,11 +38,7 @@ const Layout = ({ location, title, children, hideFooter }) => {
         {header}
         <Navigation />
       </header>
-
       <main>{children}</main>
-
-      <div style={{ flexGrow: 1 }}>&nbsp;</div>
-
       {footer}
     </div>
   );

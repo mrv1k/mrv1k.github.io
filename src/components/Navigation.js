@@ -3,7 +3,7 @@ import { Link } from "gatsby";
 
 const Navigation = () => {
   return (
-    <nav class="navigation">
+    <nav className="navigation">
       <ul>
         <li>
           <Link to="/">blog</Link>

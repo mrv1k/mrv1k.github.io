@@ -191,6 +191,10 @@ a:focus {
   min-height: 100vh;
 }
 
+.global-wrapper main {
+  flex-grow: 1;
+}
+
 .global-header {
   margin-bottom: var(--spacing-12);
   display: flex;
