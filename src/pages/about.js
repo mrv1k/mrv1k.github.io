@@ -11,7 +11,26 @@ const AboutPage = () => {
       <div className="about-page">
         <Seo title={`${title} Viktor Khotimchenko`} />
         <section className="about">
-          <p>I love programming.</p>
+          <p>
+            I love programming. Prove it? Here's a picture of me after a full
+            day of work!
+          </p>
+
+          <StaticImage
+            className="image-of-me"
+            layout="fullWidth"
+            formats={["AUTO", "WEBP", "AVIF"]}
+            src="../images/profile-big.jpg"
+            width={256}
+            height={256}
+            quality={90}
+            alt="Viktor Khotimchenko profile picture"
+          />
+
+          <p>
+            Alas, I wasn't always as happy and as determined with my career.
+          </p>
+
           <p>
             After I graduated Fanshawe college in 2015 I struggled to find a
             developer job. Soon after, I run out of money and had to get any
@@ -37,29 +56,32 @@ const AboutPage = () => {
             craft as an engineer.
           </p>
         </section>
-        <StaticImage
-          className="image-of-me"
-          layout="fixed"
-          formats={["AUTO", "WEBP", "AVIF"]}
-          src="../images/profile-big.jpg"
-          width={256}
-          height={256}
-          quality={90}
-          alt="Viktor Khotimchenko profile picture"
-        />
-        {/* <section className="skills">
-          <div>2</div>
-        </section>
-        <section className="projects">
-          <div>3</div>
-        </section>
-        <section className="experience">
-          <div>4</div>
-        </section>
-        <section className="contact">
-          <div>5</div>
-        </section> */}
       </div>
+
+      <aside className="links">
+        Projects are up on{" "}
+        <a
+          href="https://github.com/mrv1k"
+          target="_blank"
+          rel="nofollow noopener noreferrer"
+        >
+          GitHub
+        </a>
+        <br />
+        Social network of choice is{" "}
+        <a
+          href="https://www.linkedin.com/in/vkhotimchenko/"
+          target="_blank"
+          rel="nofollow noopener noreferrer"
+        >
+          LinkedIn
+        </a>
+        <br />
+        For direct contact{" "}
+        <a href="mailto:viktorkhotimchenko@gmail.com">
+          viktorkhotimchenko@gmail.com
+        </a>
+      </aside>
     </Layout>
   );
 };

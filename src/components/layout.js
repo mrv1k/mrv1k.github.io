@@ -1,9 +1,8 @@
 import * as React from "react";
 import { Link } from "gatsby";
-import Footer from "./Footer";
 import Navigation from "./Navigation";
 
-const Layout = ({ location, title, children, showFooter = false }) => {
+const Layout = ({ location, title, children }) => {
   const rootPath = `${__PATH_PREFIX__}/`;
   const isRootPath = location?.pathname === rootPath;
   let header;
@@ -25,8 +24,6 @@ const Layout = ({ location, title, children, showFooter = false }) => {
     );
   }
 
-  let footer = showFooter ? <Footer /> : null;
-
   return (
     <div className="global-wrapper">
       <header className="global-header">
@@ -35,7 +32,6 @@ const Layout = ({ location, title, children, showFooter = false }) => {
       </header>
 
       <main>{children}</main>
-      {footer}
     </div>
   );
 };

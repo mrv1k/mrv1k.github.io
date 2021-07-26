@@ -276,6 +276,17 @@ a:focus {
   background-color: rgba(209, 213, 219, 1);
 } */
 
+.image-of-me {
+  margin-bottom: var(--spacing-8);
+}
+
+.links {
+  font-size: var(--fontSize-1);
+  padding-top: var(--spacing-12);
+  color: var(--color-text-light);
+  padding-bottom: 0;
+}
+
 /* Media queries */
 
 @media (max-width: 42rem) {
