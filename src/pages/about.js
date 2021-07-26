@@ -7,7 +7,7 @@ const AboutPage = () => {
   const title = "About";
 
   return (
-    <Layout title={title}>
+    <Layout title={title} hideFooter>
       <div className="about-page">
         <Seo title={`${title} Viktor Khotimchenko`} />
         <section className="about">

@@ -1,8 +1,9 @@
 import * as React from "react";
 import { Link } from "gatsby";
 import Navigation from "./Navigation";
+import Bio from "./bio";
 
-const Layout = ({ location, title, children }) => {
+const Layout = ({ location, title, children, hideFooter }) => {
   const rootPath = `${__PATH_PREFIX__}/`;
   const isRootPath = location?.pathname === rootPath;
   let header;
@@ -24,6 +25,13 @@ const Layout = ({ location, title, children }) => {
     );
   }
 
+  let footer = hideFooter ? null : (
+    <footer>
+      <hr />
+      <Bio />
+    </footer>
+  );
+
   return (
     <div className="global-wrapper">
       <header className="global-header">
@@ -32,6 +40,10 @@ const Layout = ({ location, title, children }) => {
       </header>
 
       <main>{children}</main>
+
+      <div style={{ flexGrow: 1 }}>&nbsp;</div>
+
+      {footer}
     </div>
   );
 };
