@@ -1,6 +1,5 @@
 import * as React from "react";
 import { Link } from "gatsby";
-import Navigation from "./Navigation";
 import Bio from "./bio";
 
 const Layout = ({ location, title, children, hideFooter }) => {
@@ -10,6 +9,7 @@ const Layout = ({ location, title, children, hideFooter }) => {
 
   if (isRootPath) {
     header = (
+      // make weight black on main blog page
       <h1
         style={{ fontWeight: "var(--fontWeight-black)" }}
         className="header-link-home"
@@ -36,8 +36,19 @@ const Layout = ({ location, title, children, hideFooter }) => {
     <div className="global-wrapper">
       <header className="global-header">
         {header}
-        <Navigation />
+
+        <nav className="navigation">
+          <ul>
+            <li>
+              <Link to="/">blog</Link>
+            </li>
+            <li>
+              <Link to="/about">about</Link>
+            </li>
+          </ul>
+        </nav>
       </header>
+
       <main>{children}</main>
       {footer}
     </div>

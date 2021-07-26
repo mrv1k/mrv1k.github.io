@@ -3,11 +3,11 @@ import * as React from "react";
 import Layout from "../components/layout";
 import Seo from "../components/seo";
 
-const AboutPage = () => {
+const AboutPage = ({ location }) => {
   const title = "About";
 
   return (
-    <Layout title={title} hideFooter>
+    <Layout location={location} title={title} hideFooter>
       <div className="about-page">
         <Seo title={`${title} Viktor Khotimchenko`} />
         <section className="about">
@@ -21,14 +21,13 @@ const AboutPage = () => {
             layout="fullWidth"
             formats={["AUTO", "WEBP", "AVIF"]}
             src="../images/profile-big.jpg"
-            width={256}
-            height={256}
-            quality={90}
+            quality={80}
             alt="Viktor Khotimchenko profile picture"
           />
 
           <p>
-            Alas, I wasn't always as happy and as determined with my career.
+            Alas, I wasn't always as happy and as determined with my career
+            path.
           </p>
 
           <p>

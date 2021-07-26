@@ -1,16 +1,20 @@
 const title = `Surrender to the Grind`;
+const blogDescription = `Blog is about working long, hard and hopefully smart.`;
 
 module.exports = {
+  // https://www.gatsbyjs.com/docs/reference/config-files/gatsby-config/#flags
   flags: {
     DEV_WEBPACK_CACHE: true,
   },
+
   siteMetadata: {
     title,
     author: {
       name: `Viktor Khotimchenko`,
       summary: `Typescript and Javascript developer`,
     },
-    description: `Personal blog and website. Blog is about working long, hard and hopefully smart. Website is about me.`,
+    description: `Personal blog and website. ${blogDescription} Website is about me.`,
+    blogDescription,
     siteUrl: `https://mrv1k.me`,
     social: {
       twitter: `mrv1k_`,

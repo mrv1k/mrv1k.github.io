@@ -6,6 +6,8 @@
 :after,
 :before {
   box-sizing: border-box;
+  border-width: 0;
+  border-style: solid;
 }
 
 html {
@@ -202,15 +204,23 @@ a:focus {
   align-items: baseline;
 }
 
+.global-header a {
+  box-shadow: none;
+}
+
 .global-header nav ul {
   list-style: none;
   margin: 0;
 }
 
 .global-header nav li {
-  display: inline;
+  display: inline-block;
   padding-left: var(--spacing-3);
   margin-bottom: var(--spacing-1);
+}
+
+.global-header nav li a:hover {
+  box-shadow: 0 1px 0 0 var(--color-primary);
 }
 
 .header-link-home {
@@ -221,7 +231,6 @@ a:focus {
   letter-spacing: 0;
   line-height: normal;
   text-decoration: none;
-  box-shadow: none;
   padding: 0;
   margin: 0;
 }
