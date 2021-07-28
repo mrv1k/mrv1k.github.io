@@ -53,12 +53,19 @@
   /* Roboto 1.125 rem is about equal to JetBrains Mono 1rem */
   --fontSize-body: 1.125rem;
 
+  /* https://coolors.co/ea1d63-fafaff-00a676-303633-1e2ede */
+  --color-white: #fafaff;
+  --color-green: #00a676;
+  /* change blue */
+  /* --color-blue: #1e2ede; */
+  --color-pink: #ea1d63;
+
   --color-primary: #005b99;
   --color-text: #2e353f;
   --color-text-light: #4f5969;
-  --color-heading: #1a202c;
+  --color-heading: #303633;
   --color-heading-black: black;
-  --color-accent: #d1dce5;
+  --color-accent: #fafaff;
 
   /**
   Variable fonts:

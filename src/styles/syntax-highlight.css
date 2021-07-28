@@ -3,8 +3,13 @@
  * Add back the container background-color, border-radius, padding, margin
  * and overflow that we removed from <pre>.
  */
+
 .gatsby-highlight {
-  background-color: #fdf6e3;
+  --background: #1d1f21;
+}
+
+.gatsby-highlight {
+  background-color: var(--background);
   border-radius: 0.3rem;
   margin: 0.5em 0;
   padding: 1rem;
@@ -15,13 +20,13 @@
 
 /* For line highlights similar to PrismJS */
 .gatsby-highlight-code-line {
-  background-color: #feb;
+  background-color: #1c4e5e;
   display: block;
   margin-right: -1rem;
   margin-left: -1rem;
   padding-right: 1rem;
   padding-left: 0.75rem;
-  border-left: 0.25em solid #f99;
+  border-left: 0.25em solid #1c4e5e;
 }
 
 /**
