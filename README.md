@@ -1,16 +1,15 @@
-# [mrv1k.me](https://mrv1k.me)
+# Portfolio: Development branch
 
-Personal blog and website.
-Blog is about working long, hard and hopefully smart. Can't guarantee the smart part though.
-Website is about me.
+## Description
 
-Forked from [gatsby-starter-blog@6aae8c6](https://github.com/gatsbyjs/gatsby-starter-blog/tree/6aae8c6bf337b7ce96d4bd2ef4e3aace181e48a6)
+Simple static portfolio website, hosted via [master branch](https://mrv1k.github.io)
 
-To run locally
+## Project discovery: webpack
 
-```shell
-yarn
-yarn dev
-```
+Most time was spent learning Webpack and optimizing through it. I must admit, webpack is amazing.
 
-and open <https://localhost:8000>
+For anyone interested in learning webpack check out [SurviveJS Book](https://survivejs.com/webpack/) The book is just as good as webpack.
+
+### Why not master branch?
+
+It's a user site. "User pages must be built from the master branch."
